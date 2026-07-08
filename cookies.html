@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de cookies | Óptima Mercado</title>
+  <meta name="description" content="Política de cookies de Óptima Mercado Energético SL para optimamercado.com." />
+  <link rel="canonical" href="https://carlotalopezcarracedo.github.io/WEB-OPTIMA/cookies.html" />
+  <link rel="icon" type="image/png" href="public/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --azul: #0a2647;
+      --acento: #2c74b3;
+      --verde: #7ed957;
+      --blanco: #ffffff;
+      --gris-claro: #f6f9fc;
+      --gris-medio: #dbe5ef;
+      --gris-texto: #637083;
+      --texto: #152033;
+      --radio: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      color: var(--texto);
+      background: var(--blanco);
+      font-family: "DM Sans", Arial, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--azul);
+      font-family: "Sora", Arial, sans-serif;
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: var(--acento);
+      font-weight: 700;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--azul);
+    }
+
+    .navbar__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      gap: 18px;
+    }
+
+    .navbar__logo,
+    .navbar__back {
+      color: var(--blanco);
+      text-decoration: none;
+    }
+
+    .navbar__logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Sora", Arial, sans-serif;
+      font-weight: 800;
+    }
+
+    .navbar__logo img {
+      width: 142px;
+      height: auto;
+      max-height: 36px;
+      object-fit: contain;
+    }
+
+    .navbar__logo span {
+      color: var(--verde);
+    }
+
+    .navbar__back {
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 0.9rem;
+    }
+
+    .navbar__back:hover {
+      color: var(--verde);
+    }
+
+    .hero-legal {
+      border-bottom: 4px solid var(--verde);
+      background: var(--azul);
+      padding: 54px 0 46px;
+    }
+
+    .hero-legal__inner,
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .hero-legal__tag {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--verde);
+      font-family: "Sora", Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .hero-legal h1 {
+      color: var(--blanco);
+      font-size: 2.25rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-legal__meta {
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.92rem;
+    }
+
+    .content {
+      padding-top: 58px;
+      padding-bottom: 78px;
+    }
+
+    .notice {
+      border: 1px solid var(--gris-medio);
+      border-left: 5px solid var(--acento);
+      border-radius: var(--radio);
+      background: var(--gris-claro);
+      padding: 22px;
+      margin-bottom: 42px;
+    }
+
+    .notice p {
+      color: var(--gris-texto);
+    }
+
+    .notice strong {
+      color: var(--texto);
+    }
+
+    .section {
+      margin-bottom: 38px;
+    }
+
+    .section h2 {
+      border-bottom: 1px solid var(--gris-medio);
+      font-size: 1.14rem;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+
+    .section p,
+    .section li,
+    .cookie-table td {
+      color: var(--gris-texto);
+      font-size: 0.98rem;
+      margin-bottom: 10px;
+    }
+
+    .section ul {
+      padding-left: 20px;
+    }
+
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 4px;
+      overflow: hidden;
+      border: 1px solid var(--gris-medio);
+      border-radius: var(--radio);
+    }
+
+    .cookie-table th {
+      background: var(--azul);
+      color: var(--blanco);
+      font-family: "Sora", Arial, sans-serif;
+      font-size: 0.86rem;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .cookie-table td {
+      border-top: 1px solid var(--gris-medio);
+      padding: 12px;
+      vertical-align: top;
+    }
+
+    .footer-legal {
+      background: var(--azul);
+      padding: 26px 24px;
+      text-align: center;
+    }
+
+    .footer-legal p,
+    .footer-legal a {
+      color: rgba(255, 255, 255, 0.66);
+      font-size: 0.9rem;
+    }
+
+    .footer-legal a:hover {
+      color: var(--verde);
+    }
+
+    @media (max-width: 620px) {
+      .navbar__inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero-legal h1 {
+        font-size: 1.86rem;
+      }
+
+      .cookie-table,
+      .cookie-table thead,
+      .cookie-table tbody,
+      .cookie-table tr,
+      .cookie-table th,
+      .cookie-table td {
+        display: block;
+      }
+
+      .cookie-table th {
+        display: none;
+      }
+
+      .cookie-table td {
+        border-top: 0;
+        border-bottom: 1px solid var(--gris-medio);
+      }
+
+      .cookie-table td::before {
+        content: attr(data-label);
+        display: block;
+        color: var(--azul);
+        font-family: "Sora", Arial, sans-serif;
+        font-size: 0.82rem;
+        font-weight: 800;
+        margin-bottom: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar" aria-label="Navegación legal">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="public/optima-logo-white.png" alt="Óptima" />
+        <span>Mercado</span>
+      </a>
+      <a href="index.html" class="navbar__back">Volver a la web</a>
+    </div>
+  </nav>
+
+  <header class="hero-legal">
+    <div class="hero-legal__inner">
+      <span class="hero-legal__tag">Legal</span>
+      <h1>Política de cookies</h1>
+      <p class="hero-legal__meta">Última actualización: julio de 2026</p>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="notice">
+      <p><strong>Estado actual:</strong> en la versión revisada de esta web no se han incorporado cookies de analítica, publicidad comportamental, redes sociales ni seguimiento comercial. Si se añaden en el futuro, esta política deberá actualizarse y se habilitará el mecanismo de consentimiento que corresponda.</p>
+    </div>
+
+    <section class="section">
+      <h2>1. Qué son las cookies</h2>
+      <p>Las cookies son pequeños archivos que una web puede guardar en tu navegador o dispositivo. Sirven para recordar información técnica, mantener una sesión, guardar preferencias, medir el uso de una página o personalizar contenidos, entre otras finalidades.</p>
+      <p>También existen tecnologías similares, como el almacenamiento local, píxeles, identificadores de dispositivo o etiquetas de seguimiento. En esta política usamos la palabra cookies para referirnos de forma general a estas tecnologías cuando tengan una función equivalente.</p>
+    </section>
+
+    <section class="section">
+      <h2>2. Quién es el responsable</h2>
+      <p>El responsable de esta política es <strong>ÓPTIMA MERCADO ENERGÉTICO SL</strong>, con NIF B27677368 y domicilio en Lugar Ribeira de Abaixo, núm. 7, 36685 A Estrada, Pontevedra, España. Puedes contactar en <a href="mailto:info@optimamercado.com">info@optimamercado.com</a>.</p>
+    </section>
+
+    <section class="section">
+      <h2>3. Cookies utilizadas en esta web</h2>
+      <p>En las páginas informativas de optimamercado.com no se han identificado cookies propias persistentes ni cookies de terceros con fines de analítica o publicidad. La navegación por estas páginas puede generar registros técnicos del servidor, pero esos registros no son cookies.</p>
+
+      <table class="cookie-table">
+        <thead>
+          <tr>
+            <th>Categoría</th>
+            <th>Uso actual</th>
+            <th>Consentimiento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Categoría">Cookies técnicas necesarias</td>
+            <td data-label="Uso actual">No se han identificado cookies propias persistentes en las páginas informativas. Si alguna cookie técnica fuese necesaria para seguridad, carga o navegación, se usaría solo para esa finalidad.</td>
+            <td data-label="Consentimiento">No requieren consentimiento cuando son estrictamente necesarias.</td>
+          </tr>
+          <tr>
+            <td data-label="Categoría">Analítica o medición</td>
+            <td data-label="Uso actual">No se utiliza Google Analytics, píxeles de medición ni herramientas equivalentes en estas páginas.</td>
+            <td data-label="Consentimiento">Si se incorporan, se informará y se pedirá consentimiento cuando proceda.</td>
+          </tr>
+          <tr>
+            <td data-label="Categoría">Publicidad comportamental</td>
+            <td data-label="Uso actual">No se utilizan cookies publicitarias ni perfiles de navegación.</td>
+            <td data-label="Consentimiento">Requieren consentimiento previo si se incorporan.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>4. Recursos externos y flujo de análisis</h2>
+      <p>La web carga tipografías desde Google Fonts. Esta carga puede implicar una conexión técnica con servidores de Google para descargar los archivos de fuente, aunque Óptima Mercado no usa esa carga para instalar cookies de analítica o publicidad.</p>
+      <p>Los botones de “Analizar factura” llevan a un flujo de análisis alojado en optimamercado.com. Ese entorno puede utilizar cookies técnicas o mecanismos equivalentes para permitir la carga, seguridad, continuidad de sesión o envío de documentación. Si ese flujo incorporase cookies no técnicas, deberá ofrecer la información y opciones de consentimiento correspondientes en su propia capa o configuración.</p>
+    </section>
+
+    <section class="section">
+      <h2>5. Cómo gestionar las cookies</h2>
+      <p>Puedes bloquear, eliminar o permitir cookies desde la configuración de tu navegador. Ten en cuenta que bloquear cookies técnicas puede afectar al funcionamiento de algunas páginas o servicios.</p>
+      <ul>
+        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+        <li><a href="https://support.mozilla.org/es/kb/cookies-informacion-que-los-sitios-web-guardan-en-" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+        <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a></li>
+        <li><a href="https://support.microsoft.com/es-es/windows/eliminar-y-administrar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener">Microsoft Edge</a></li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>6. Cambios en la política</h2>
+      <p>Óptima Mercado podrá actualizar esta política si cambia la configuración técnica de la web, si se incorporan herramientas de analítica, publicidad, chat, medición o si cambia la normativa aplicable. La versión vigente será la publicada en esta página.</p>
+    </section>
+
+    <section class="section">
+      <h2>7. Contacto</h2>
+      <p>Para cualquier consulta sobre esta política puedes escribir a <a href="mailto:info@optimamercado.com">info@optimamercado.com</a>.</p>
+    </section>
+  </main>
+
+  <footer class="footer-legal">
+    <p>© 2026 Óptima Mercado · <a href="privacidad.html">Privacidad</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="cookies.html">Cookies</a></p>
+  </footer>
+</body>
+</html>

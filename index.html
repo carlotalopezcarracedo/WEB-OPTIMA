@@ -1,0 +1,2778 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Óptima Mercado | Revisión gratuita de tu factura de la luz</title>
+  <meta name="description" content="Sube tu factura de luz y te la revisamos gratis. Te explicamos con claridad si estás pagando de más, si tu contrato está bien ajustado y si hay margen de mejora." />
+  <meta name="keywords" content="revisión factura luz, revisar factura electricidad, pagar menos luz, contrato de luz, tarifa eléctrica, factura de la luz Galicia, Óptima Mercado" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://carlotalopezcarracedo.github.io/WEB-OPTIMA/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="¿Estás pagando de más en la luz?" />
+  <meta property="og:description" content="En Óptima Mercado revisamos tu factura gratis y te explicamos el resultado sin compromiso." />
+  <meta property="og:url" content="https://carlotalopezcarracedo.github.io/WEB-OPTIMA/" />
+  <meta property="og:image" content="https://carlotalopezcarracedo.github.io/WEB-OPTIMA/public/optima-logo-color.png" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="¿Estás pagando de más en la luz?" />
+  <meta name="twitter:description" content="Sube tu factura y te la revisamos gratis, sin compromiso y explicado por personas reales." />
+  <meta name="twitter:image" content="https://carlotalopezcarracedo.github.io/WEB-OPTIMA/public/optima-logo-color.png" />
+  <link rel="icon" type="image/png" href="public/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --blue-950: #071f3b;
+      --blue-900: #0a2647;
+      --blue-800: #10385f;
+      --blue-700: #165a8f;
+      --blue-100: #e8f3fb;
+      --green-500: #7ed957;
+      --green-600: #5bbf36;
+      --lime-400: #c5e84a;
+      --ink: #152033;
+      --muted: #637083;
+      --line: #dbe5ef;
+      --surface: #f6f9fc;
+      --surface-strong: #edf5f9;
+      --white: #ffffff;
+      --warning: #995c00;
+      --warning-bg: #fff4db;
+      --danger: #b42318;
+      --danger-bg: #fff0ed;
+      --success: #287a39;
+      --success-bg: #eefbe9;
+      --radius: 8px;
+      --shadow-sm: 0 2px 12px rgba(10, 38, 71, 0.08);
+      --shadow-md: 0 12px 32px rgba(10, 38, 71, 0.12);
+      --shadow-lg: 0 24px 64px rgba(10, 38, 71, 0.18);
+      --transition: 180ms ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 92px;
+    }
+
+    body {
+      min-width: 320px;
+      color: var(--ink);
+      background: var(--white);
+      font-family: "DM Sans", Arial, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: var(--blue-950);
+      font-family: "Sora", Arial, sans-serif;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 800;
+    }
+
+    h3 {
+      font-size: 1.16rem;
+      font-weight: 700;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(126, 217, 87, 0.88);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 2000;
+      transform: translateY(-140%);
+      border-radius: var(--radius);
+      background: var(--white);
+      color: var(--blue-950);
+      font-weight: 700;
+      padding: 10px 14px;
+      box-shadow: var(--shadow-md);
+      transition: transform var(--transition);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .section--soft {
+      background: var(--surface);
+    }
+
+    .section--blue {
+      background: var(--blue-950);
+    }
+
+    .section__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      color: var(--blue-700);
+      font-family: "Sora", Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .section__eyebrow::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--green-500);
+    }
+
+    .section__header {
+      max-width: 740px;
+      margin-bottom: 42px;
+    }
+
+    .section__header p {
+      max-width: 650px;
+      margin-top: 14px;
+      font-size: 1.08rem;
+    }
+
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(24px);
+      filter: blur(5px);
+      transition:
+        opacity 700ms ease,
+        transform 700ms cubic-bezier(0.19, 1, 0.22, 1),
+        filter 700ms ease;
+      transition-delay: var(--reveal-delay, 0ms);
+    }
+
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      border: 0;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-family: "Sora", Arial, sans-serif;
+      font-size: 0.94rem;
+      font-weight: 800;
+      line-height: 1;
+      padding: 15px 22px;
+      text-align: center;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
+      white-space: normal;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn--primary {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      color: var(--blue-950);
+      background: linear-gradient(135deg, var(--lime-400), var(--green-500));
+      box-shadow: 0 12px 28px rgba(126, 217, 87, 0.28);
+    }
+
+    .btn--primary::after {
+      content: "";
+      position: absolute;
+      inset: -40% auto -40% -70%;
+      width: 48%;
+      transform: skewX(-18deg);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.54), transparent);
+      opacity: 0;
+      pointer-events: none;
+      animation: buttonSweep 5.8s ease-in-out infinite;
+    }
+
+    .btn--primary:hover {
+      box-shadow: 0 18px 42px rgba(126, 217, 87, 0.34);
+    }
+
+    .btn--secondary {
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .btn--secondary:hover {
+      border-color: var(--green-500);
+      color: var(--green-500);
+      background: rgba(126, 217, 87, 0.08);
+    }
+
+    .btn--dark {
+      color: var(--white);
+      background: var(--blue-900);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn--dark:hover {
+      background: var(--blue-800);
+      box-shadow: var(--shadow-md);
+    }
+
+    .site-header {
+      position: fixed;
+      top: 18px;
+      right: 0;
+      left: 0;
+      z-index: 1000;
+      background: transparent;
+      pointer-events: none;
+    }
+
+    .site-header__inner {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 66px;
+      gap: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      background: rgba(7, 31, 59, 0.82);
+      box-shadow: 0 18px 46px rgba(3, 18, 35, 0.28);
+      backdrop-filter: blur(18px);
+      padding: 8px 10px 8px 18px;
+      pointer-events: auto;
+    }
+
+    .site-header__inner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(110deg, transparent 0 30%, rgba(255, 255, 255, 0.11) 45%, transparent 60% 100%);
+      transform: translateX(-120%);
+      animation: headerSheen 7s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .brand {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      font-family: "Sora", Arial, sans-serif;
+      font-weight: 800;
+    }
+
+    .brand__logo {
+      width: 154px;
+      height: auto;
+      max-height: 38px;
+      object-fit: contain;
+    }
+
+    .brand__text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .brand__name {
+      color: var(--white);
+      font-size: 0.95rem;
+    }
+
+    .brand__tagline {
+      color: rgba(255, 255, 255, 0.62);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    .site-nav {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .site-nav a {
+      border-radius: 999px;
+      color: rgba(255, 255, 255, 0.78);
+      font-family: "Sora", Arial, sans-serif;
+      font-size: 0.84rem;
+      font-weight: 700;
+      padding: 10px 12px;
+      transition: color var(--transition), background var(--transition), transform var(--transition);
+    }
+
+    .site-nav a:hover,
+    .site-nav a[aria-current="true"] {
+      color: var(--green-500);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .site-nav .nav-cta {
+      color: var(--blue-950);
+      background: linear-gradient(135deg, var(--lime-400), var(--green-500));
+      box-shadow: 0 10px 24px rgba(126, 217, 87, 0.24);
+      padding: 12px 18px;
+    }
+
+    .site-nav .nav-cta:hover {
+      color: var(--blue-950);
+      transform: translateY(-1px);
+      background: linear-gradient(135deg, var(--lime-400), var(--green-500));
+    }
+
+    .menu-toggle {
+      position: relative;
+      z-index: 1;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius);
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.08);
+      cursor: pointer;
+    }
+
+    .menu-toggle__lines,
+    .menu-toggle__lines::before,
+    .menu-toggle__lines::after {
+      display: block;
+      width: 20px;
+      height: 2px;
+      border-radius: 4px;
+      background: currentColor;
+      transition: transform var(--transition), opacity var(--transition);
+    }
+
+    .menu-toggle__lines {
+      position: relative;
+    }
+
+    .menu-toggle__lines::before,
+    .menu-toggle__lines::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    .menu-toggle__lines::before {
+      top: -7px;
+    }
+
+    .menu-toggle__lines::after {
+      top: 7px;
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle__lines {
+      transform: rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle__lines::before {
+      transform: translateY(7px) rotate(90deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle__lines::after {
+      opacity: 0;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 760px;
+      display: flex;
+      align-items: center;
+      padding: 128px 0 72px;
+      overflow: hidden;
+      background:
+        linear-gradient(140deg, rgba(7, 31, 59, 0.98), rgba(16, 56, 95, 0.96)),
+        var(--blue-950);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(115deg, transparent 0 34%, rgba(126, 217, 87, 0.08) 35%, rgba(53, 166, 216, 0.1) 39%, transparent 44% 100%),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.055) 0 1px, transparent 1px 92px);
+      opacity: 0.5;
+      transform: translateX(-9%);
+      animation: heroEnergy 13s linear infinite;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 8px;
+      background: linear-gradient(90deg, var(--green-500), #1792d0, var(--lime-400));
+    }
+
+    .hero__inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      display: grid;
+      grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.86fr);
+      align-items: center;
+      gap: 58px;
+    }
+
+    .hero__content,
+    .hero-visual,
+    .invoice-preview,
+    .problem-copy,
+    .why-list,
+    .direct-cta__box {
+      min-width: 0;
+    }
+
+    .hero__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 22px;
+      border: 1px solid rgba(126, 217, 87, 0.32);
+      border-radius: 999px;
+      color: var(--green-500);
+      background: rgba(126, 217, 87, 0.08);
+      font-family: "Sora", Arial, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 8px 13px;
+    }
+
+    .hero h1 {
+      max-width: 780px;
+      color: var(--white);
+      margin-bottom: 22px;
+      overflow-wrap: normal;
+    }
+
+    .hero h1 span {
+      display: block;
+    }
+
+    .hero__lead {
+      max-width: 650px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 1.18rem;
+    }
+
+    .hero__lead span {
+      display: inline;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .hero__microcopy {
+      margin-top: 16px;
+      color: rgba(255, 255, 255, 0.64);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 10px;
+      margin-top: 34px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+    }
+
+    .hero__content > * {
+      animation: heroEnter 760ms cubic-bezier(0.19, 1, 0.22, 1) both;
+    }
+
+    .hero__content > *:nth-child(2) {
+      animation-delay: 90ms;
+    }
+
+    .hero__content > *:nth-child(3) {
+      animation-delay: 170ms;
+    }
+
+    .hero__content > *:nth-child(4) {
+      animation-delay: 250ms;
+    }
+
+    .hero__content > *:nth-child(n + 5) {
+      animation-delay: 330ms;
+    }
+
+    .trust-row::-webkit-scrollbar {
+      display: none;
+    }
+
+    .trust-pill {
+      display: inline-flex;
+      align-items: center;
+      flex: 0 0 auto;
+      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      color: rgba(255, 255, 255, 0.88);
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 8px 10px;
+    }
+
+    .trust-pill::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green-500);
+    }
+
+    .hero-visual {
+      position: relative;
+      display: block;
+      animation: heroVisualEnter 920ms cubic-bezier(0.19, 1, 0.22, 1) 180ms both;
+    }
+
+    .invoice-preview {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: var(--shadow-lg);
+      padding: 34px;
+      min-height: 430px;
+      animation: softFloat 7.5s ease-in-out infinite;
+    }
+
+    .invoice-preview::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      pointer-events: none;
+      background:
+        linear-gradient(110deg, transparent 0 42%, rgba(126, 217, 87, 0.18) 48%, rgba(27, 158, 224, 0.16) 54%, transparent 62%),
+        radial-gradient(circle at var(--spot-x, 86%) var(--spot-y, 14%), rgba(126, 217, 87, 0.2), transparent 28%);
+      opacity: 0.72;
+    }
+
+    .invoice-preview::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 18%;
+      width: 2px;
+      background: linear-gradient(180deg, transparent, rgba(126, 217, 87, 0.9), transparent);
+      box-shadow: 0 0 34px rgba(126, 217, 87, 0.45);
+      animation: scanLine 5.5s ease-in-out infinite;
+      opacity: 0.72;
+    }
+
+    @keyframes scanLine {
+      0%, 100% { transform: translateX(0); opacity: 0; }
+      18%, 82% { opacity: 0.75; }
+      50% { transform: translateX(330px); }
+    }
+
+    @keyframes headerSheen {
+      0%, 62%, 100% { transform: translateX(-120%); opacity: 0; }
+      72% { opacity: 0.9; }
+      88% { transform: translateX(120%); opacity: 0; }
+    }
+
+    @keyframes softFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 0.86; }
+      50% { transform: scale(1.16); opacity: 1; }
+    }
+
+    @keyframes heroEnergy {
+      0% { transform: translateX(-9%); }
+      100% { transform: translateX(9%); }
+    }
+
+    @keyframes heroEnter {
+      0% { opacity: 0; transform: translateY(18px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes heroVisualEnter {
+      0% { opacity: 0; transform: translateY(24px) scale(0.98); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes buttonSweep {
+      0%, 56%, 100% { left: -72%; opacity: 0; }
+      66% { opacity: 0.75; }
+      82% { left: 118%; opacity: 0; }
+    }
+
+    @keyframes processPulse {
+      0% { left: 9%; opacity: 0; transform: scale(0.78); }
+      8%, 88% { opacity: 1; }
+      100% { left: calc(91% - 16px); opacity: 0; transform: scale(1); }
+    }
+
+    @keyframes processPulseVertical {
+      0% { top: 52px; opacity: 0; transform: scale(0.78); }
+      8%, 88% { opacity: 1; }
+      100% { top: calc(100% - 66px); opacity: 0; transform: scale(1); }
+    }
+
+    @keyframes nodePing {
+      0%, 18%, 100% { opacity: 0; transform: scale(0.86); }
+      7% { opacity: 0.92; transform: scale(1.1); }
+    }
+
+    @keyframes documentScan {
+      0%, 52%, 100% { left: -80%; opacity: 0; }
+      64% { opacity: 0.86; }
+      82% { left: 118%; opacity: 0; }
+    }
+
+    @keyframes lineGlow {
+      0%, 100% { filter: saturate(1); }
+      50% { filter: saturate(1.45) brightness(1.08); }
+    }
+
+    @keyframes faqReveal {
+      0% { opacity: 0; transform: translateY(-6px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .invoice-preview__top {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 16px;
+    }
+
+    .invoice-preview__brand {
+      display: grid;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .invoice-preview__logo {
+      width: 132px;
+      height: auto;
+      max-height: 36px;
+      object-fit: contain;
+    }
+
+    .invoice-preview__label {
+      color: var(--blue-950);
+      font-family: "Sora", Arial, sans-serif;
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .invoice-preview__status {
+      border-radius: 999px;
+      color: var(--success);
+      background: var(--success-bg);
+      font-size: 0.86rem;
+      font-weight: 800;
+      padding: 10px 14px;
+    }
+
+    .invoice-lines {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 14px;
+      padding: 28px 0 24px;
+    }
+
+    .invoice-line {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 94px;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .invoice-line span:first-child {
+      height: 12px;
+      border-radius: 999px;
+      background: var(--blue-100);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .invoice-line span:first-child::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      width: var(--line-width, 72%);
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--green-500), #34a6d8);
+    }
+
+    .invoice-line strong {
+      color: var(--blue-950);
+      font-family: "Sora", Arial, sans-serif;
+      font-size: 0.82rem;
+    }
+
+    .invoice-checks {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .invoice-check {
+      border-radius: var(--radius);
+      background: var(--surface);
+      padding: 18px;
+    }
+
+    .invoice-check strong {
+      display: block;
+      color: var(--blue-950);
+      font-size: 0.88rem;
+    }
+
+    .invoice-check span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+      margin-top: 2px;
+    }
+
+    .invoice-summary {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .invoice-summary span {
+      border-radius: var(--radius);
+      background: var(--blue-100);
+      color: var(--blue-950);
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .problem-layout {
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+      gap: 46px;
+      align-items: start;
+    }
+
+    .problem-note {
+      border-left: 5px solid var(--green-500);
+      border-radius: var(--radius);
+      background: var(--blue-950);
+      padding: 26px;
+      color: var(--white);
+      box-shadow: var(--shadow-md);
+    }
+
+    .problem-note strong {
+      display: block;
+      color: var(--green-500);
+      font-family: "Sora", Arial, sans-serif;
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .problem-note p {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .problem-copy p {
+      font-size: 1.12rem;
+      margin-bottom: 18px;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .review-card {
+      position: relative;
+      overflow: hidden;
+      grid-column: span 2;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(232, 243, 251, 0.58), rgba(255, 255, 255, 0) 76%),
+        var(--white);
+      box-shadow: var(--shadow-sm);
+      padding: 24px;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+
+    .review-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 4px;
+      transform: scaleX(0.18);
+      transform-origin: left center;
+      background: linear-gradient(90deg, var(--green-500), #35a6d8, var(--lime-400));
+      opacity: 0.55;
+      transition: transform 420ms ease, opacity 420ms ease;
+    }
+
+    .review-card:nth-child(n + 4) {
+      grid-column: span 3;
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(126, 217, 87, 0.65);
+      box-shadow: var(--shadow-md);
+    }
+
+    .review-card:hover::before {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+
+    .review-card--featured {
+      border-color: rgba(126, 217, 87, 0.36);
+    }
+
+    .review-card--featured::after {
+      display: none;
+    }
+
+    .review-card__icon,
+    .process-node,
+    .outcome-chip {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border-radius: var(--radius);
+      color: var(--blue-950);
+      background: linear-gradient(135deg, var(--lime-400), var(--green-500));
+      font-family: "Sora", Arial, sans-serif;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .review-card p {
+      margin-top: 10px;
+      font-size: 0.96rem;
+    }
+
+    .process {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 24px;
+      padding: 38px 0 8px;
+    }
+
+    .process::before {
+      content: "";
+      position: absolute;
+      top: 64px;
+      right: 9%;
+      left: 9%;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--green-500), #35a6d8, var(--lime-400));
+    }
+
+    .process::after {
+      content: "";
+      position: absolute;
+      top: 57px;
+      left: 9%;
+      z-index: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      background: var(--green-500);
+      box-shadow:
+        0 0 0 8px rgba(126, 217, 87, 0.16),
+        0 0 30px rgba(53, 166, 216, 0.48);
+      animation: processPulse 5.6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+    }
+
+    .process-step {
+      position: relative;
+      z-index: 1;
+      padding: 0;
+    }
+
+    .process-node {
+      width: 52px;
+      height: 52px;
+      margin-bottom: 24px;
+      border-radius: 999px;
+      box-shadow: 0 0 0 12px var(--surface);
+    }
+
+    .process-node {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .process-node::after {
+      content: "";
+      position: absolute;
+      inset: -7px;
+      z-index: -1;
+      border: 1px solid rgba(126, 217, 87, 0.46);
+      border-radius: inherit;
+      opacity: 0;
+      animation: nodePing 5.6s ease-in-out infinite;
+    }
+
+    .process-step:nth-child(2) .process-node::after {
+      animation-delay: 0.75s;
+    }
+
+    .process-step:nth-child(3) .process-node::after {
+      animation-delay: 1.5s;
+    }
+
+    .process-step:nth-child(4) .process-node::after {
+      animation-delay: 2.25s;
+    }
+
+    .process-step:nth-child(5) .process-node::after {
+      animation-delay: 3s;
+    }
+
+    .process-step p {
+      margin-top: 10px;
+      font-size: 0.92rem;
+    }
+
+    .steps-note {
+      margin-top: 28px;
+      border-radius: var(--radius);
+      background: var(--blue-100);
+      color: var(--blue-950);
+      font-weight: 800;
+      padding: 16px 18px;
+    }
+
+    .outcome-lab {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .outcome-tabs {
+      display: grid;
+      gap: 12px;
+    }
+
+    .outcome-tab {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 14px;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--white);
+      cursor: pointer;
+      padding: 16px;
+      text-align: left;
+      transition: transform var(--transition), border-color var(--transition), background var(--transition), box-shadow var(--transition);
+    }
+
+    .outcome-tab:hover,
+    .outcome-tab[aria-selected="true"] {
+      transform: translateX(6px);
+      border-color: rgba(126, 217, 87, 0.78);
+      background: rgba(126, 217, 87, 0.11);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.14);
+    }
+
+    .outcome-chip {
+      width: 42px;
+      height: 42px;
+      margin: 0;
+    }
+
+    .outcome-tab strong {
+      display: block;
+      font-family: "Sora", Arial, sans-serif;
+      line-height: 1.2;
+    }
+
+    .outcome-tab span:last-child {
+      display: block;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      margin-top: 3px;
+    }
+
+    .outcome-stage {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 240px;
+      gap: 26px;
+      align-items: start;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
+        rgba(255, 255, 255, 0.06);
+      padding: 30px;
+      min-height: 100%;
+      transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+    }
+
+    .outcome-stage.is-changing {
+      transform: translateY(-3px);
+      border-color: rgba(126, 217, 87, 0.45);
+    }
+
+    .outcome-stage::before {
+      content: "";
+      position: absolute;
+      inset: auto -80px -120px auto;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      border: 42px solid rgba(126, 217, 87, 0.12);
+    }
+
+    .outcome-stage__copy,
+    .outcome-takeaways {
+      position: relative;
+      z-index: 1;
+    }
+
+    .outcome-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      border: 1px solid rgba(126, 217, 87, 0.28);
+      border-radius: 999px;
+      color: var(--green-500);
+      background: rgba(126, 217, 87, 0.1);
+      font-family: "Sora", Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 8px 11px;
+    }
+
+    .outcome-badge::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: currentColor;
+      animation: pulseDot 2.4s ease-in-out infinite;
+    }
+
+    .outcome-stage h3 {
+      color: var(--white);
+      font-size: 1.8rem;
+      max-width: 420px;
+    }
+
+    .outcome-stage p {
+      color: rgba(255, 255, 255, 0.72);
+      margin-top: 12px;
+      max-width: 520px;
+      font-size: 1.08rem;
+    }
+
+    .outcome-visual {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 14px;
+      align-self: stretch;
+    }
+
+    .outcome-document {
+      position: relative;
+      overflow: hidden;
+      min-height: 210px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.05)),
+        rgba(255, 255, 255, 0.08);
+      padding: 18px;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.12);
+      animation: softFloat 6s ease-in-out infinite;
+    }
+
+    .outcome-document::after {
+      content: "";
+      position: absolute;
+      inset: -45% auto -45% -80%;
+      width: 62%;
+      transform: skewX(-18deg);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      opacity: 0;
+      animation: documentScan 5.4s ease-in-out infinite;
+    }
+
+    .outcome-document span {
+      display: block;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .outcome-document strong {
+      display: block;
+      color: var(--white);
+      font-family: "Sora", Arial, sans-serif;
+      font-size: 1.24rem;
+      line-height: 1.18;
+      margin-top: 10px;
+    }
+
+    .outcome-document__lines {
+      display: grid;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .outcome-document__lines i {
+      display: block;
+      height: 9px;
+      border-radius: 999px;
+      background: rgba(232, 243, 251, 0.16);
+      overflow: hidden;
+    }
+
+    .outcome-document__lines i::before {
+      content: "";
+      display: block;
+      width: var(--w, 68%);
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--green-500), #35a6d8);
+      box-shadow: 0 0 18px rgba(53, 166, 216, 0.22);
+      transition: width 420ms cubic-bezier(0.19, 1, 0.22, 1);
+      animation: lineGlow 3.8s ease-in-out infinite;
+    }
+
+    .outcome-flow {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .outcome-flow span {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius);
+      color: rgba(255, 255, 255, 0.78);
+      background: rgba(7, 31, 59, 0.24);
+      font-size: 0.76rem;
+      font-weight: 800;
+      line-height: 1.2;
+      padding: 10px 8px;
+      text-align: center;
+    }
+
+    .outcome-takeaways {
+      display: grid;
+      gap: 14px;
+      margin-top: 28px;
+      grid-column: 1 / -1;
+    }
+
+    .outcome-takeaway {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 14px;
+      align-items: start;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: var(--radius);
+      background: rgba(7, 31, 59, 0.28);
+      padding: 15px;
+    }
+
+    .outcome-takeaway::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      margin: 6px auto 0;
+      border-radius: 999px;
+      background: var(--green-500);
+      box-shadow: 0 0 0 7px rgba(126, 217, 87, 0.13);
+    }
+
+    .outcome-takeaway strong {
+      display: block;
+      color: var(--white);
+      font-family: "Sora", Arial, sans-serif;
+      line-height: 1.25;
+    }
+
+    .outcome-takeaway span {
+      display: block;
+      color: rgba(255, 255, 255, 0.72);
+      margin-top: 3px;
+    }
+
+    .section--blue .section__eyebrow,
+    .section--blue h2 {
+      color: var(--white);
+    }
+
+    .section--blue .section__header p {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .why-layout {
+      display: grid;
+      grid-template-columns: 0.95fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    .why-proof {
+      grid-row: span 2;
+      min-height: 100%;
+      display: grid;
+      align-content: space-between;
+      gap: 28px;
+      border-radius: var(--radius);
+      color: var(--white);
+      background:
+        radial-gradient(circle at 94% 18%, rgba(126, 217, 87, 0.22), transparent 32%),
+        linear-gradient(145deg, var(--blue-950), var(--blue-800));
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .why-proof strong {
+      display: block;
+      color: var(--green-500);
+      font-family: "Sora", Arial, sans-serif;
+      font-size: 3rem;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .why-proof span {
+      display: block;
+      color: rgba(255, 255, 255, 0.78);
+      font-weight: 700;
+    }
+
+    .why-proof__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .why-proof__tags span {
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.86rem;
+      padding: 8px 10px;
+    }
+
+    .why-list {
+      display: contents;
+    }
+
+    .why-item {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 12px;
+      align-items: start;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(232, 243, 251, 0.48), rgba(255, 255, 255, 0)),
+        var(--white);
+      padding: 20px;
+      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .why-item:hover {
+      transform: translateY(-3px);
+      border-color: rgba(126, 217, 87, 0.52);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .why-item::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      margin-top: 7px;
+      border-radius: 999px;
+      background: var(--green-500);
+      box-shadow: 0 0 0 6px rgba(126, 217, 87, 0.16);
+    }
+
+    .why-item strong {
+      display: block;
+      color: var(--blue-950);
+      font-family: "Sora", Arial, sans-serif;
+      line-height: 1.25;
+    }
+
+    .why-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 3px;
+    }
+
+    .direct-cta {
+      background:
+        linear-gradient(140deg, rgba(7, 31, 59, 0.98), rgba(16, 56, 95, 0.98)),
+        var(--blue-950);
+    }
+
+    .direct-cta__box {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 28px;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.05));
+      box-shadow: var(--shadow-lg);
+      padding: 34px;
+    }
+
+    .direct-cta__box::after {
+      content: "";
+      position: absolute;
+      inset: -38% auto -38% -72%;
+      width: 46%;
+      transform: skewX(-18deg);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.16), transparent);
+      opacity: 0;
+      pointer-events: none;
+      animation: documentScan 7s ease-in-out infinite;
+    }
+
+    .direct-cta h2,
+    .direct-cta .section__eyebrow {
+      color: var(--white);
+    }
+
+    .direct-cta p {
+      color: rgba(255, 255, 255, 0.74);
+      max-width: 680px;
+      margin-top: 12px;
+      font-size: 1.06rem;
+    }
+
+    .direct-cta__notes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .direct-cta__notes span {
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      color: rgba(255, 255, 255, 0.82);
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 0.9rem;
+      font-weight: 800;
+      padding: 8px 12px;
+    }
+
+    .faq-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+      gap: 12px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .faq-item:hover {
+      transform: translateY(-2px);
+      border-color: rgba(126, 217, 87, 0.46);
+      box-shadow: var(--shadow-md);
+    }
+
+    .faq-item summary {
+      position: relative;
+      list-style: none;
+      cursor: pointer;
+      color: var(--blue-950);
+      font-family: "Sora", Arial, sans-serif;
+      font-weight: 800;
+      padding: 18px 54px 18px 18px;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      position: absolute;
+      top: 50%;
+      right: 18px;
+      transform: translateY(-50%);
+      width: 28px;
+      height: 28px;
+      border-radius: var(--radius);
+      display: grid;
+      place-items: center;
+      color: var(--blue-950);
+      background: var(--blue-100);
+      font-family: "Sora", Arial, sans-serif;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+      background: var(--green-500);
+    }
+
+    .faq-item p {
+      border-top: 1px solid var(--line);
+      padding: 16px 18px 18px;
+    }
+
+    .faq-item[open] p {
+      animation: faqReveal 220ms ease;
+    }
+
+    .final-cta {
+      text-align: center;
+      background:
+        linear-gradient(140deg, rgba(7, 31, 59, 0.98), rgba(16, 56, 95, 0.98)),
+        var(--blue-950);
+    }
+
+    .final-cta h2 {
+      color: var(--white);
+    }
+
+    .final-cta p {
+      max-width: 620px;
+      margin: 14px auto 26px;
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 1.08rem;
+    }
+
+    .site-footer {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, #071f3b 0%, #031428 100%);
+      color: var(--white);
+      padding: 68px 0 32px;
+    }
+
+    .site-footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--green-500), #35a6d8, var(--lime-400));
+    }
+
+    .footer-panel {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.035));
+      box-shadow: 0 22px 64px rgba(0, 0, 0, 0.22);
+      padding: 34px;
+    }
+
+    .footer-panel::after {
+      content: "";
+      position: absolute;
+      inset: -34% auto -34% -76%;
+      z-index: 0;
+      width: 48%;
+      transform: skewX(-18deg);
+      background: linear-gradient(90deg, transparent, rgba(126, 217, 87, 0.13), rgba(53, 166, 216, 0.12), transparent);
+      opacity: 0;
+      pointer-events: none;
+      animation: documentScan 8.4s ease-in-out infinite;
+    }
+
+    .site-footer__inner,
+    .footer-cta-row,
+    .footer-bottom {
+      position: relative;
+      z-index: 1;
+    }
+
+    .site-footer__inner {
+      display: grid;
+      grid-template-columns: 1.25fr 0.9fr 0.8fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .footer-brand {
+      display: grid;
+      gap: 14px;
+    }
+
+    .footer-brand__logo {
+      width: 170px;
+      height: auto;
+      max-height: 44px;
+      object-fit: contain;
+    }
+
+    .footer-brand strong {
+      font-family: "Sora", Arial, sans-serif;
+      font-size: 1.08rem;
+    }
+
+    .footer-brand p {
+      max-width: 440px;
+      color: rgba(255, 255, 255, 0.66);
+    }
+
+    .footer-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .footer-badges span {
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.07);
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.82rem;
+      font-weight: 800;
+      padding: 7px 10px;
+    }
+
+    .footer-column {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .footer-column h3 {
+      color: var(--white);
+      font-size: 0.92rem;
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 9px;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 700;
+    }
+
+    .footer-links a,
+    .footer-contact a {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color var(--transition), transform var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--green-500);
+      transform: translateX(3px);
+    }
+
+    .footer-contact {
+      display: grid;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 0.94rem;
+    }
+
+    .footer-contact p {
+      color: rgba(255, 255, 255, 0.72);
+      margin: 0;
+    }
+
+    .footer-contact strong {
+      display: block;
+      color: var(--white);
+      font-family: "Sora", Arial, sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 2px;
+    }
+
+    .footer-cta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+    }
+
+    .footer-cta-row p {
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 24px;
+      color: rgba(255, 255, 255, 0.56);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 1080px) {
+      h1 {
+        font-size: 3.2rem;
+      }
+
+      h2 {
+        font-size: 2.08rem;
+      }
+
+      .hero__inner,
+      .problem-layout,
+      .direct-cta__box,
+      .outcome-lab {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-visual {
+        max-width: 620px;
+      }
+
+      .review-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .review-card,
+      .review-card:nth-child(n + 4),
+      .review-card--featured {
+        grid-row: auto;
+        grid-column: auto;
+      }
+
+      .why-layout {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .why-proof {
+        grid-row: auto;
+        grid-column: 1 / -1;
+      }
+
+      .site-footer__inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .process {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+      }
+
+      .process::before {
+        top: 52px;
+        bottom: 52px;
+        left: 50px;
+        width: 4px;
+        height: auto;
+        right: auto;
+      }
+
+      .process::after {
+        top: 52px;
+        left: 44px;
+        animation-name: processPulseVertical;
+      }
+
+      .process-step {
+        display: grid;
+        grid-template-columns: 54px 1fr;
+        gap: 16px;
+        padding: 0;
+      }
+
+      .process-node {
+        grid-row: 1 / span 2;
+        margin: 0;
+      }
+
+      .process-step h3,
+      .process-step p {
+        grid-column: 2;
+      }
+    }
+
+    @media (max-width: 880px) {
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .site-nav {
+        position: fixed;
+        top: 96px;
+        right: 16px;
+        left: 16px;
+        display: grid;
+        gap: 0;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: var(--radius);
+        background: var(--blue-950);
+        box-shadow: var(--shadow-lg);
+        padding: 10px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-8px);
+        transition: opacity var(--transition), transform var(--transition);
+      }
+
+      .site-nav.is-open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .site-nav a {
+        border-radius: var(--radius);
+        padding: 14px 12px;
+      }
+
+      .site-nav .nav-cta {
+        margin-top: 8px;
+        text-align: center;
+      }
+
+      .hero {
+        padding-top: 112px;
+      }
+
+      .review-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      html {
+        scroll-padding-top: 78px;
+      }
+
+      .container {
+        max-width: 390px;
+        margin-left: 0;
+        margin-right: auto;
+        padding: 0 18px;
+        overflow-x: clip;
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .site-header__inner {
+        min-height: 68px;
+        border-radius: 26px;
+        padding: 8px 10px 8px 14px;
+      }
+
+      .brand__tagline {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 104px 0 58px;
+      }
+
+      .hero::before {
+        opacity: 0.32;
+      }
+
+      h1 {
+        font-size: 2.55rem;
+      }
+
+      h2 {
+        font-size: 1.78rem;
+      }
+
+      .hero__lead,
+      .section__header p,
+      .problem-copy p,
+      .direct-cta p,
+      .final-cta p {
+        font-size: 1rem;
+      }
+
+      .hero__lead span {
+        display: block;
+      }
+
+      .hero__actions,
+      .final-cta .btn {
+        width: 100%;
+      }
+
+      .hero__actions .btn,
+      .final-cta .btn {
+        width: 100%;
+      }
+
+      .hero__inner,
+      .hero__content,
+      .hero-visual,
+      .invoice-preview,
+      .hero__actions,
+      .trust-row {
+        max-width: calc(100vw - 36px);
+      }
+
+      .invoice-preview {
+        min-height: auto;
+      }
+
+      .trust-row {
+        gap: 8px;
+      }
+
+      .trust-pill {
+        width: 100%;
+      }
+
+      .invoice-preview,
+      .direct-cta__box,
+      .why-proof,
+      .problem-note {
+        padding: 20px;
+      }
+
+      .invoice-checks,
+      .review-grid,
+      .outcome-lab,
+      .outcome-stage,
+      .why-layout,
+      .faq-list {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .review-card,
+      .review-card:nth-child(n + 4),
+      .why-proof {
+        grid-column: auto;
+        grid-row: auto;
+      }
+
+      .direct-cta__box {
+        align-items: stretch;
+      }
+
+      .direct-cta__box .btn {
+        width: 100%;
+      }
+
+      .outcome-takeaway {
+        grid-template-columns: 28px 1fr;
+      }
+
+      .outcome-stage {
+        padding: 22px;
+      }
+
+      .outcome-visual {
+        order: 2;
+      }
+
+      .outcome-takeaways {
+        order: 3;
+      }
+
+      .footer-panel {
+        padding: 22px;
+      }
+
+      .site-footer__inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .footer-cta-row {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .footer-cta-row .btn {
+        width: 100%;
+      }
+
+      .invoice-preview__top {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .invoice-line {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .invoice-line strong {
+        display: none;
+      }
+
+      .site-footer__inner,
+      .footer-bottom {
+        grid-template-columns: 1fr;
+        display: grid;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero__content,
+      .hero__actions,
+      .trust-row {
+        width: 330px;
+        max-width: 330px;
+      }
+
+      .brand__logo {
+        width: 130px;
+      }
+
+      .brand__name {
+        font-size: 0.88rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .btn {
+        padding-right: 16px;
+        padding-left: 16px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .hero__content,
+      .hero__actions,
+      .trust-row {
+        width: 300px;
+        max-width: 300px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 1ms !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      .reveal-on-scroll {
+        opacity: 1;
+        transform: none;
+        filter: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="site-header__inner">
+        <a class="brand" href="#inicio" aria-label="Óptima Mercado, inicio">
+          <img class="brand__logo" src="public/optima-logo-white.png" alt="Óptima" />
+          <span class="brand__text">
+            <span class="brand__name">Mercado</span>
+            <span class="brand__tagline">Revisión gratuita de factura</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+          <a href="#inicio">Inicio</a>
+          <a href="#que-revisamos">Qué revisamos</a>
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#despues">Resultados</a>
+          <a href="#faq">FAQ</a>
+          <a class="nav-cta" href="https://optimamercado.com/q/7ee8b384-2056-4fde-beb1-f13c248c7462">Analizar factura</a>
+        </nav>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="site-nav" aria-expanded="false">
+          <span class="menu-toggle__lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <span class="hero__eyebrow">Revisión gratuita de factura de luz</span>
+            <h1><span>¿Estás pagando</span><span>de más en la luz?</span></h1>
+            <p class="hero__lead">
+              <span>Sube tu factura y la revisamos gratis.</span>
+              <span>Te explicamos con claridad qué estás pagando.</span>
+              <span>Vemos si tu contrato está ajustado</span>
+              <span>y si existe margen de mejora.</span>
+            </p>
+
+            <div class="hero__actions" aria-label="Acciones principales">
+              <a class="btn btn--primary" href="https://optimamercado.com/q/7ee8b384-2056-4fde-beb1-f13c248c7462">Analizar factura gratis</a>
+              <a class="btn btn--secondary" href="#como-funciona">Ver cómo funciona</a>
+            </div>
+            <p class="hero__microcopy">Gratis · Sin compromiso · Explicado por personas reales</p>
+
+            <div class="trust-row" aria-label="Puntos de confianza">
+              <span class="trust-pill">Revisión gratuita</span>
+              <span class="trust-pill">Sin compromiso</span>
+              <span class="trust-pill">Equipo gallego</span>
+              <span class="trust-pill">Explicación clara</span>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Vista simulada de revisión de factura">
+            <div class="invoice-preview" role="img" aria-label="Factura de luz revisada por Óptima Mercado">
+              <div class="invoice-preview__top">
+                <div class="invoice-preview__brand">
+                  <img class="invoice-preview__logo" src="public/optima-logo-color.png" alt="" aria-hidden="true" />
+                  <span class="invoice-preview__label">Tu factura, revisada con calma</span>
+                </div>
+                <span class="invoice-preview__status">Sin obligación</span>
+              </div>
+
+              <div class="invoice-lines" aria-hidden="true">
+                <div class="invoice-line" style="--line-width: 64%;"><span></span><strong>Potencia</strong></div>
+                <div class="invoice-line" style="--line-width: 82%;"><span></span><strong>Consumo</strong></div>
+                <div class="invoice-line" style="--line-width: 71%;"><span></span><strong>Tarifa</strong></div>
+              </div>
+
+              <div class="invoice-checks" aria-hidden="true">
+                <div class="invoice-check">
+                  <strong>Contrato</strong>
+                  <span>Condiciones y vencimiento</span>
+                </div>
+                <div class="invoice-check">
+                  <strong>Resultado</strong>
+                  <span>Claro, humano y sin presión</span>
+                </div>
+              </div>
+
+              <div class="invoice-summary" aria-hidden="true">
+                <span>Lectura clara</span>
+                <span>Sin presión</span>
+                <span>Opciones reales</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="problema">
+      <div class="container">
+        <div class="problem-layout">
+          <div class="section__header">
+            <span class="section__eyebrow">El problema</span>
+            <h2>Tu factura de luz no está hecha para que la entiendas.</h2>
+          </div>
+
+          <div class="problem-copy">
+            <p>La mayoría de personas no sabe si tiene bien ajustada la potencia, si su tarifa encaja con su consumo o si hay condiciones que ya no le compensan. Y es normal: el sector energético no lo pone fácil.</p>
+            <div class="problem-note">
+              <strong>No tienes que entenderlo todo.</strong>
+              <p>Para eso estamos nosotros. En Óptima revisamos tu factura por ti y te lo explicamos sin marearte.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="que-revisamos">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Qué revisamos</span>
+          <h2>No miramos tu factura por encima.</h2>
+          <p>Revisamos los puntos que suelen marcar la diferencia entre un contrato ajustado y uno que conviene revisar con más detalle.</p>
+        </div>
+
+        <div class="review-grid">
+          <article class="review-card review-card--featured">
+            <span class="review-card__icon" aria-hidden="true">1</span>
+            <h3>Potencia contratada</h3>
+            <p>Comprobamos si está ajustada a lo que necesitas en casa, en tu actividad o en tu pequeño negocio.</p>
+          </article>
+
+          <article class="review-card">
+            <span class="review-card__icon" aria-hidden="true">2</span>
+            <h3>Consumo real</h3>
+            <p>Miramos cómo y cuándo consumes para entender si tu contrato encaja con tus hábitos.</p>
+          </article>
+
+          <article class="review-card">
+            <span class="review-card__icon" aria-hidden="true">3</span>
+            <h3>Tarifa y condiciones</h3>
+            <p>Revisamos precios, estructura del contrato y condiciones que pueden afectar al coste final.</p>
+          </article>
+
+          <article class="review-card">
+            <span class="review-card__icon" aria-hidden="true">4</span>
+            <h3>Vencimientos y cambios</h3>
+            <p>Detectamos fechas o revisiones que conviene tener presentes antes de renovar o tocar nada.</p>
+          </article>
+
+          <article class="review-card">
+            <span class="review-card__icon" aria-hidden="true">5</span>
+            <h3>Posibles alternativas</h3>
+            <p>Solo te enseñamos opciones si realmente tienen sentido para tu caso. Sin humo y sin presión.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="como-funciona">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Cómo funciona</span>
+          <h2>Subes la factura. Nosotros hacemos el resto.</h2>
+          <p>El proceso está pensado para móvil: una foto clara o un PDF es suficiente para empezar la revisión.</p>
+        </div>
+
+        <div class="process" aria-label="Proceso de revisión">
+          <article class="process-step">
+            <span class="process-node">1</span>
+            <h3>Subes la factura</h3>
+            <p>Puede ser una foto hecha con el móvil o un PDF.</p>
+          </article>
+
+          <article class="process-step">
+            <span class="process-node">2</span>
+            <h3>Analizamos el contrato</h3>
+            <p>Revisamos consumo, potencia, tarifa y condiciones.</p>
+          </article>
+
+          <article class="process-step">
+            <span class="process-node">3</span>
+            <h3>Te explicamos el resultado</h3>
+            <p>Sin tecnicismos innecesarios y con una respuesta clara.</p>
+          </article>
+
+          <article class="process-step">
+            <span class="process-node">4</span>
+            <h3>Vemos opciones</h3>
+            <p>Si hay margen de mejora, te enseñamos alternativas.</p>
+          </article>
+
+          <article class="process-step">
+            <span class="process-node">5</span>
+            <h3>Tú decides</h3>
+            <p>No hay obligación de contratar ni de cambiar nada.</p>
+          </article>
+        </div>
+
+        <p class="steps-note">Subir la factura no te obliga a contratar nada. La revisión es gratuita y sin compromiso.</p>
+      </div>
+    </section>
+
+    <section class="section section--blue" id="despues">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Después de revisar</span>
+          <h2>No siempre hace falta cambiar. Y eso también te lo diremos.</h2>
+          <p>No prometemos magia. Revisamos, comparamos y te decimos lo que hay en tu caso.</p>
+        </div>
+
+        <div class="outcome-lab">
+          <div class="outcome-tabs" role="tablist" aria-label="Posibles resultados de la revisión">
+            <button class="outcome-tab" type="button" role="tab" aria-selected="true" data-title="Tu contrato está bien" data-copy="Te lo decimos claro para que te quedes tranquilo. A veces confirmar que todo está razonablemente ajustado ya es una buena noticia." data-badge="Resultado tranquilo" data-visual="Todo encaja" data-line-one="78%" data-line-two="62%" data-line-three="86%" data-diagnosis="No vemos señales claras de sobrecoste." data-meaning="Puedes quedarte como estás sin tomar decisiones por miedo." data-next="Te dejamos la explicación y resolvemos cualquier duda.">
+              <span class="outcome-chip" aria-hidden="true">A</span>
+              <span><strong>Tu contrato está bien</strong><span>Sin cambios innecesarios.</span></span>
+            </button>
+
+            <button class="outcome-tab" type="button" role="tab" aria-selected="false" data-title="Hay algo que ajustar" data-copy="Puede ser potencia, tarifa, condiciones o vencimiento. Te explicamos qué punto conviene tocar y por qué." data-badge="Ajuste recomendado" data-visual="Hay un punto mejorable" data-line-one="54%" data-line-two="82%" data-line-three="68%" data-diagnosis="Hay un punto concreto que conviene revisar." data-meaning="No hace falta cambiarlo todo; puede bastar con ajustar una condición." data-next="Te indicamos qué tocar, cuándo hacerlo y qué impacto puede tener.">
+              <span class="outcome-chip" aria-hidden="true">B</span>
+              <span><strong>Hay algo que ajustar</strong><span>Potencia, tarifa o condiciones.</span></span>
+            </button>
+
+            <button class="outcome-tab" type="button" role="tab" aria-selected="false" data-title="Hay una alternativa mejor" data-copy="Te explicamos opciones y diferencias antes de decidir. No se trata de cambiar por cambiar, sino de entender si compensa." data-badge="Comparativa abierta" data-visual="Puede compensar comparar" data-line-one="44%" data-line-two="88%" data-line-three="74%" data-diagnosis="Tu contrato puede mejorar frente a otras opciones disponibles." data-meaning="Comparamos con criterio, no con una promesa rápida de ahorro." data-next="Te enseñamos diferencias, condiciones y pasos antes de decidir.">
+              <span class="outcome-chip" aria-hidden="true">C</span>
+              <span><strong>Hay una alternativa mejor</strong><span>Solo si tiene sentido para ti.</span></span>
+            </button>
+
+            <button class="outcome-tab" type="button" role="tab" aria-selected="false" data-title="Conviene esperar" data-copy="Si no compensa tocar nada ahora, no forzamos el cambio. Te diremos qué vigilar y cuándo volver a revisarlo." data-badge="Mejor esperar" data-visual="Vigilar antes de tocar" data-line-one="66%" data-line-two="38%" data-line-three="90%" data-diagnosis="Ahora mismo no compensa mover el contrato." data-meaning="Esperar también puede ser una decisión inteligente." data-next="Te decimos qué fecha, precio o cambio conviene vigilar.">
+              <span class="outcome-chip" aria-hidden="true">D</span>
+              <span><strong>Conviene esperar</strong><span>También puede ser la mejor opción.</span></span>
+            </button>
+          </div>
+
+          <div class="outcome-stage" role="tabpanel" aria-live="polite">
+            <div class="outcome-stage__copy">
+              <span class="outcome-badge" id="outcome-badge">Resultado tranquilo</span>
+              <h3 id="outcome-title">Tu contrato está bien</h3>
+              <p id="outcome-copy">Te lo decimos claro para que te quedes tranquilo. A veces confirmar que todo está razonablemente ajustado ya es una buena noticia.</p>
+            </div>
+
+            <div class="outcome-visual" aria-hidden="true">
+              <div class="outcome-document">
+                <span>Factura revisada</span>
+                <strong id="outcome-visual-title">Todo encaja</strong>
+                <div class="outcome-document__lines">
+                  <i id="outcome-line-one" style="--w: 78%;"></i>
+                  <i id="outcome-line-two" style="--w: 62%;"></i>
+                  <i id="outcome-line-three" style="--w: 86%;"></i>
+                </div>
+              </div>
+              <div class="outcome-flow">
+                <span>Revisamos</span>
+                <span>Explicamos</span>
+                <span>Tú decides</span>
+              </div>
+            </div>
+
+            <div class="outcome-takeaways">
+              <div class="outcome-takeaway">
+                <div>
+                  <strong>Diagnóstico</strong>
+                  <span id="outcome-diagnosis">No vemos señales claras de sobrecoste.</span>
+                </div>
+              </div>
+              <div class="outcome-takeaway">
+                <div>
+                  <strong>Qué significa</strong>
+                  <span id="outcome-meaning">Puedes quedarte como estás sin tomar decisiones por miedo.</span>
+                </div>
+              </div>
+              <div class="outcome-takeaway">
+                <div>
+                  <strong>Siguiente paso</strong>
+                  <span id="outcome-next">Te dejamos la explicación y resolvemos cualquier duda.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="por-que-optima">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Por qué Óptima</span>
+          <h2>Energía explicada por personas, no por letra pequeña.</h2>
+          <p>Somos un equipo gallego con experiencia real en el sector energético. Trabajamos caso a caso, con criterio y sin prometer lo que no depende de nosotros.</p>
+        </div>
+
+        <div class="why-layout">
+          <div class="why-proof">
+            <div>
+              <strong>+20 años</strong>
+              <span>de experiencia en energía, ahora aplicados a revisar tu factura con claridad.</span>
+            </div>
+            <div class="why-proof__tags" aria-label="Forma de trabajar">
+              <span>Respuesta humana</span>
+              <span>Sin presión</span>
+              <span>Explicación clara</span>
+            </div>
+          </div>
+
+          <div class="why-list">
+            <div class="why-item">
+              <div>
+                <strong>Equipo gallego y soporte humano</strong>
+                <span>Detrás de la revisión hay personas reales, no una respuesta automática.</span>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div>
+                <strong>Varias comercializadoras</strong>
+                <span>Comparamos opciones cuando tiene sentido, sin casarnos con una sola alternativa.</span>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div>
+                <strong>Análisis individual</strong>
+                <span>Una vivienda, un autónomo y un pequeño negocio no consumen igual. Lo miramos en contexto.</span>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div>
+                <strong>Sin promesas agresivas</strong>
+                <span>Si tu contrato está bien, también te lo diremos. La confianza empieza por hablar claro.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section direct-cta" id="analizar">
+      <div class="container">
+        <div class="direct-cta__box">
+          <div>
+            <span class="section__eyebrow">Analizar factura</span>
+            <h2>Haz el análisis desde el flujo seguro de Óptima.</h2>
+            <p>Todos los botones de análisis te llevan al mismo enlace. Allí podrás iniciar la revisión de tu factura sin duplicar datos en esta web.</p>
+            <div class="direct-cta__notes">
+              <span>Gratis</span>
+              <span>Sin compromiso</span>
+              <span>Sin campos duplicados</span>
+            </div>
+          </div>
+
+          <a class="btn btn--primary" href="https://optimamercado.com/q/7ee8b384-2056-4fde-beb1-f13c248c7462">Analizar factura gratis</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="faq">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Preguntas frecuentes</span>
+          <h2>Dudas normales antes de subir una factura.</h2>
+          <p>La revisión es sencilla, pero es lógico querer saber qué pasa con tus datos y qué compromiso asumes.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>¿La revisión es gratis?</summary>
+            <p>Sí. Revisamos tu factura de forma gratuita y te explicamos el resultado sin compromiso.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Tengo que cambiar de compañía?</summary>
+            <p>No. Subir la factura no te obliga a cambiar ni a contratar nada. Si hay opciones interesantes, te las explicamos y tú decides.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Qué hacéis con mi factura?</summary>
+            <p>La usamos para revisar tu contrato, consumo, potencia y condiciones. No la usamos para otros fines ni la compartimos fuera de lo necesario para gestionar la revisión solicitada.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Cuánto tardáis en responder?</summary>
+            <p>Depende del volumen de solicitudes, pero intentamos responder lo antes posible. Si falta información, te contactaremos para completarla.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Me vais a llamar constantemente?</summary>
+            <p>No. Te contactaremos para explicarte el resultado de la revisión y resolver dudas. No creemos en perseguir a nadie.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Puedo subir una foto hecha con el móvil?</summary>
+            <p>Sí. Una foto clara sirve. Asegúrate de que se vean bien los datos de contrato, potencia, consumo y precios.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Garantizáis que voy a ahorrar?</summary>
+            <p>No garantizamos ahorro. Lo honesto es revisar tu caso y decirte si hay margen de mejora, si conviene ajustar algo o si tu contrato ya está bien.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Qué pasa si mi contrato ya está bien?</summary>
+            <p>Te lo diremos. A veces la mejor decisión es no cambiar nada, y saberlo también aporta tranquilidad.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta" id="cta-final">
+      <div class="container">
+        <h2>Tardarás menos de un minuto.</h2>
+        <p>Sube tu factura y sal de dudas. Si está bien, te lo diremos. Si hay margen de mejora, también.</p>
+        <a class="btn btn--primary" href="https://optimamercado.com/q/7ee8b384-2056-4fde-beb1-f13c248c7462">Analizar factura gratis</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-panel">
+        <div class="site-footer__inner">
+          <div class="footer-brand">
+            <img class="footer-brand__logo" src="public/optima-logo-white.png" alt="Óptima Mercado" />
+            <strong>Óptima Mercado</strong>
+            <p>Revisión gratuita de factura de luz para personas, familias, autónomos y pequeños negocios.</p>
+            <div class="footer-badges" aria-label="Puntos de confianza">
+              <span>Gratis</span>
+              <span>Sin compromiso</span>
+              <span>Equipo gallego</span>
+            </div>
+          </div>
+
+          <nav class="footer-column" aria-label="Mapa del sitio">
+            <h3>Sitemap</h3>
+            <div class="footer-links">
+              <a href="#inicio">Inicio</a>
+              <a href="#que-revisamos">Qué revisamos</a>
+              <a href="#como-funciona">Cómo funciona</a>
+              <a href="#despues">Después de revisar</a>
+              <a href="#por-que-optima">Por qué Óptima</a>
+              <a href="#faq">Preguntas frecuentes</a>
+            </div>
+          </nav>
+
+          <nav class="footer-column" aria-label="Páginas legales">
+            <h3>Legal</h3>
+            <div class="footer-links">
+              <a href="privacidad.html">Privacidad</a>
+              <a href="aviso-legal.html">Aviso legal</a>
+              <a href="cookies.html">Cookies</a>
+            </div>
+          </nav>
+
+          <div class="footer-column">
+            <h3>Contacto</h3>
+            <div class="footer-contact">
+              <p><strong>Email</strong><a href="mailto:info@optimamercado.com">info@optimamercado.com</a></p>
+              <p><strong>Sociedad</strong>ÓPTIMA MERCADO ENERGÉTICO SL · NIF B27677368</p>
+              <p><strong>Domicilio</strong>Lugar Ribeira de Abaixo, 7 · 36685 A Estrada, Pontevedra</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-cta-row">
+          <p>Sube tu factura y sal de dudas con una explicación clara, humana y sin presión.</p>
+          <a class="btn btn--primary" href="https://optimamercado.com/q/7ee8b384-2056-4fde-beb1-f13c248c7462">Analizar factura gratis</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>Hecho en Galicia.</span>
+        <span>© <span id="current-year">2026</span> Óptima Mercado.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const menuToggle = document.querySelector(".menu-toggle");
+      const siteNav = document.querySelector("#site-nav");
+      const navLinks = document.querySelectorAll("#site-nav a");
+      const sectionLinks = Array.from(navLinks).filter((link) => link.getAttribute("href")?.startsWith("#"));
+      const currentYear = document.querySelector("#current-year");
+      const outcomeTabs = document.querySelectorAll(".outcome-tab");
+      const outcomeStage = document.querySelector(".outcome-stage");
+      const outcomeBadge = document.querySelector("#outcome-badge");
+      const outcomeTitle = document.querySelector("#outcome-title");
+      const outcomeCopy = document.querySelector("#outcome-copy");
+      const outcomeVisualTitle = document.querySelector("#outcome-visual-title");
+      const outcomeLineOne = document.querySelector("#outcome-line-one");
+      const outcomeLineTwo = document.querySelector("#outcome-line-two");
+      const outcomeLineThree = document.querySelector("#outcome-line-three");
+      const outcomeDiagnosis = document.querySelector("#outcome-diagnosis");
+      const outcomeMeaning = document.querySelector("#outcome-meaning");
+      const outcomeNext = document.querySelector("#outcome-next");
+      const invoicePreview = document.querySelector(".invoice-preview");
+      const proofCounter = document.querySelector(".why-proof strong");
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const revealTargets = document.querySelectorAll([
+        ".section__header",
+        ".problem-copy",
+        ".problem-note",
+        ".review-card",
+        ".process-step",
+        ".steps-note",
+        ".outcome-tab",
+        ".outcome-stage",
+        ".why-proof",
+        ".why-item",
+        ".direct-cta__box",
+        ".faq-item",
+        ".final-cta .container",
+        ".footer-panel"
+      ].join(","));
+
+      if (currentYear) {
+        currentYear.textContent = String(new Date().getFullYear());
+      }
+
+      let proofCounterStarted = false;
+
+      const startProofCounter = () => {
+        if (!proofCounter || proofCounterStarted) return;
+        proofCounterStarted = true;
+
+        if (prefersReducedMotion) {
+          proofCounter.textContent = "+20 a\u00f1os";
+          return;
+        }
+
+        const target = 20;
+        const duration = 900;
+        const start = performance.now();
+
+        const tick = (time) => {
+          const progress = Math.min((time - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const value = Math.round(eased * target);
+          proofCounter.textContent = `+${value} a\u00f1os`;
+
+          if (progress < 1) {
+            window.requestAnimationFrame(tick);
+          }
+        };
+
+        window.requestAnimationFrame(tick);
+      };
+
+      if (revealTargets.length) {
+        revealTargets.forEach((element, index) => {
+          element.classList.add("reveal-on-scroll");
+          element.style.setProperty("--reveal-delay", `${Math.min((index % 6) * 70, 350)}ms`);
+        });
+
+        if ("IntersectionObserver" in window) {
+          const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              entry.target.classList.add("is-visible");
+
+              if (entry.target.matches(".why-proof")) {
+                startProofCounter();
+              }
+
+              observer.unobserve(entry.target);
+            });
+          }, {
+            rootMargin: "0px 0px 18% 0px",
+            threshold: 0.03
+          });
+
+          revealTargets.forEach((element) => revealObserver.observe(element));
+        } else {
+          revealTargets.forEach((element) => element.classList.add("is-visible"));
+          startProofCounter();
+        }
+      }
+
+      if (invoicePreview && window.matchMedia("(pointer: fine)").matches) {
+        invoicePreview.addEventListener("pointermove", (event) => {
+          const rect = invoicePreview.getBoundingClientRect();
+          const x = ((event.clientX - rect.left) / rect.width) * 100;
+          const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+          invoicePreview.style.setProperty("--spot-x", `${Math.round(x)}%`);
+          invoicePreview.style.setProperty("--spot-y", `${Math.round(y)}%`);
+        });
+
+        invoicePreview.addEventListener("pointerleave", () => {
+          invoicePreview.style.removeProperty("--spot-x");
+          invoicePreview.style.removeProperty("--spot-y");
+        });
+      }
+
+      const closeMenu = () => {
+        if (!menuToggle || !siteNav) return;
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Abrir menú");
+        siteNav.classList.remove("is-open");
+        document.body.classList.remove("menu-open");
+      };
+
+      if (menuToggle && siteNav) {
+        menuToggle.addEventListener("click", () => {
+          const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+          menuToggle.setAttribute("aria-expanded", String(!isOpen));
+          menuToggle.setAttribute("aria-label", isOpen ? "Abrir menú" : "Cerrar menú");
+          siteNav.classList.toggle("is-open", !isOpen);
+          document.body.classList.toggle("menu-open", !isOpen);
+        });
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+      }
+
+      if (sectionLinks.length) {
+        const sectionPairs = sectionLinks
+          .map((link) => ({ link, section: document.querySelector(link.getAttribute("href")) }))
+          .filter(({ section }) => section);
+
+        const updateActiveNav = () => {
+          const marker = window.innerHeight * 0.36;
+          const active = sectionPairs.reduce((current, item) => {
+            return item.section.getBoundingClientRect().top <= marker ? item : current;
+          }, sectionPairs[0]);
+
+          sectionLinks.forEach((link) => link.removeAttribute("aria-current"));
+          active?.link.setAttribute("aria-current", "true");
+        };
+
+        updateActiveNav();
+        window.addEventListener("scroll", updateActiveNav, { passive: true });
+        window.addEventListener("resize", updateActiveNav);
+      }
+
+      outcomeTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          outcomeTabs.forEach((item) => item.setAttribute("aria-selected", "false"));
+          tab.setAttribute("aria-selected", "true");
+
+          if (outcomeStage) {
+            outcomeStage.classList.remove("is-changing");
+            window.requestAnimationFrame(() => outcomeStage.classList.add("is-changing"));
+            window.setTimeout(() => outcomeStage.classList.remove("is-changing"), 260);
+          }
+
+          if (outcomeBadge) outcomeBadge.textContent = tab.dataset.badge || "";
+          if (outcomeTitle) outcomeTitle.textContent = tab.dataset.title || "";
+          if (outcomeCopy) outcomeCopy.textContent = tab.dataset.copy || "";
+          if (outcomeVisualTitle) outcomeVisualTitle.textContent = tab.dataset.visual || "";
+          if (outcomeLineOne) outcomeLineOne.style.setProperty("--w", tab.dataset.lineOne || "72%");
+          if (outcomeLineTwo) outcomeLineTwo.style.setProperty("--w", tab.dataset.lineTwo || "64%");
+          if (outcomeLineThree) outcomeLineThree.style.setProperty("--w", tab.dataset.lineThree || "82%");
+          if (outcomeDiagnosis) outcomeDiagnosis.textContent = tab.dataset.diagnosis || "";
+          if (outcomeMeaning) outcomeMeaning.textContent = tab.dataset.meaning || "";
+          if (outcomeNext) outcomeNext.textContent = tab.dataset.next || "";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
