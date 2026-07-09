@@ -12,9 +12,9 @@ Sitio web estático para la revisión gratuita de facturas de luz de Óptima Mer
 - `robots.txt` y `sitemap.xml`: indexación básica.
 - `public/`: logos, favicon y assets públicos.
 
-## Publicar en GitHub Pages
+## Publicar en GitHub Pages con Actions
 
-Este proyecto está preparado para publicarse desde la raíz del repositorio.
+Este proyecto está preparado para publicarse desde la raíz del repositorio mediante GitHub Actions.
 
 1. Crea o abre el repositorio público en GitHub.
 2. Desde esta carpeta, ejecuta:
@@ -26,11 +26,8 @@ git push -u origin main
 ```
 
 3. En GitHub, entra en `Settings` > `Pages`.
-4. En `Build and deployment`, selecciona:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/ (root)`
-5. Guarda los cambios.
+4. En `Build and deployment`, selecciona `GitHub Actions` como fuente.
+5. El workflow `.github/workflows/pages.yml` publicará la web en cada push a `main`.
 
 La web quedará disponible en la URL que GitHub indique, normalmente:
 
