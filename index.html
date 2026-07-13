@@ -290,12 +290,16 @@
 
     .site-header {
       position: fixed;
-      top: 18px;
+      top: 22px;
       right: 0;
       left: 0;
       z-index: 1000;
       background: transparent;
       pointer-events: none;
+    }
+
+    .site-header .container {
+      max-width: 1280px;
     }
 
     .site-header__inner {
@@ -304,14 +308,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 66px;
-      gap: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
+      min-height: 78px;
+      gap: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: 999px;
-      background: rgba(7, 31, 59, 0.82);
-      box-shadow: 0 18px 46px rgba(3, 18, 35, 0.28);
-      backdrop-filter: blur(18px);
-      padding: 8px 10px 8px 18px;
+      background: linear-gradient(90deg, rgba(52, 72, 94, 0.98), rgba(43, 65, 89, 0.98));
+      box-shadow: 0 18px 48px rgba(3, 18, 35, 0.28), 0 0 0 1px rgba(7, 31, 59, 0.12);
+      backdrop-filter: blur(20px) saturate(130%);
+      padding: 10px 14px 10px 28px;
       pointer-events: auto;
     }
 
@@ -319,7 +323,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(110deg, transparent 0 30%, rgba(255, 255, 255, 0.11) 45%, transparent 60% 100%);
+      background: linear-gradient(110deg, transparent 0 34%, rgba(255, 255, 255, 0.08) 48%, transparent 64% 100%);
       transform: translateX(-120%);
       animation: headerSheen 7s ease-in-out infinite;
       pointer-events: none;
@@ -330,34 +334,35 @@
       z-index: 1;
       display: inline-flex;
       align-items: center;
-      gap: 12px;
+      flex-shrink: 0;
+      gap: 18px;
       color: var(--white);
       font-family: "Sora", Arial, sans-serif;
       font-weight: 800;
     }
 
     .brand__logo {
-      width: 154px;
+      width: 166px;
       height: auto;
-      max-height: 38px;
+      max-height: 42px;
       object-fit: contain;
     }
 
     .brand__text {
       display: flex;
       flex-direction: column;
-      line-height: 1.05;
+      line-height: 1;
     }
 
     .brand__name {
       color: var(--white);
-      font-size: 0.95rem;
+      font-size: 1.24rem;
     }
 
     .brand__tagline {
       color: rgba(255, 255, 255, 0.62);
       font-family: "DM Sans", Arial, sans-serif;
-      font-size: 0.76rem;
+      font-size: 0.82rem;
       font-weight: 700;
     }
 
@@ -366,36 +371,52 @@
       z-index: 1;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      margin-left: auto;
     }
 
     .site-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      border: 1px solid transparent;
       border-radius: 999px;
-      color: rgba(255, 255, 255, 0.78);
+      color: rgba(255, 255, 255, 0.76);
       font-family: "Sora", Arial, sans-serif;
-      font-size: 0.84rem;
-      font-weight: 700;
-      padding: 10px 12px;
-      transition: color var(--transition), background var(--transition), transform var(--transition);
+      font-size: 0.92rem;
+      font-weight: 800;
+      line-height: 1;
+      padding: 0 16px;
+      transition: color var(--transition), background var(--transition), border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+      white-space: nowrap;
     }
 
-    .site-nav a:hover,
-    .site-nav a[aria-current="true"] {
-      color: var(--green-500);
+    .site-nav a:hover {
+      color: rgba(255, 255, 255, 0.94);
       background: rgba(255, 255, 255, 0.08);
     }
 
+    .site-nav a[aria-current="true"] {
+      color: var(--green-500);
+      border-color: rgba(255, 255, 255, 0.04);
+      background: rgba(255, 255, 255, 0.11);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
     .site-nav .nav-cta {
+      min-height: 56px;
       color: var(--blue-950);
       background: linear-gradient(135deg, var(--lime-400), var(--green-500));
-      box-shadow: 0 10px 24px rgba(126, 217, 87, 0.24);
-      padding: 12px 18px;
+      box-shadow: 0 12px 28px rgba(126, 217, 87, 0.26);
+      padding: 0 24px;
     }
 
     .site-nav .nav-cta:hover {
       color: var(--blue-950);
       transform: translateY(-1px);
       background: linear-gradient(135deg, var(--lime-400), var(--green-500));
+      box-shadow: 0 16px 34px rgba(126, 217, 87, 0.32);
     }
 
     .menu-toggle {
@@ -407,7 +428,7 @@
       width: 46px;
       height: 46px;
       border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: var(--radius);
+      border-radius: 999px;
       color: var(--white);
       background: rgba(255, 255, 255, 0.08);
       cursor: pointer;
@@ -1850,6 +1871,44 @@
       color: var(--green-500);
     }
 
+    @media (max-width: 1240px) {
+      .site-header__inner {
+        gap: 16px;
+        padding-left: 20px;
+      }
+
+      .brand {
+        gap: 12px;
+      }
+
+      .brand__logo {
+        width: 138px;
+      }
+
+      .brand__name {
+        font-size: 1.08rem;
+      }
+
+      .brand__tagline {
+        font-size: 0.76rem;
+      }
+
+      .site-nav {
+        gap: 4px;
+      }
+
+      .site-nav a {
+        min-height: 48px;
+        font-size: 0.82rem;
+        padding: 0 10px;
+      }
+
+      .site-nav .nav-cta {
+        min-height: 52px;
+        padding: 0 14px;
+      }
+    }
+
     @media (max-width: 1080px) {
       h1 {
         font-size: 3.2rem;
@@ -1932,23 +1991,23 @@
       }
     }
 
-    @media (max-width: 880px) {
+    @media (max-width: 960px) {
       .menu-toggle {
         display: inline-flex;
       }
 
       .site-nav {
         position: fixed;
-        top: 96px;
+        top: 108px;
         right: 16px;
         left: 16px;
         display: grid;
-        gap: 0;
+        gap: 6px;
         border: 1px solid rgba(255, 255, 255, 0.14);
-        border-radius: var(--radius);
-        background: var(--blue-950);
+        border-radius: 26px;
+        background: rgba(7, 31, 59, 0.98);
         box-shadow: var(--shadow-lg);
-        padding: 10px;
+        padding: 12px;
         opacity: 0;
         pointer-events: none;
         transform: translateY(-8px);
@@ -1962,8 +2021,9 @@
       }
 
       .site-nav a {
-        border-radius: var(--radius);
-        padding: 14px 12px;
+        min-height: 48px;
+        border-radius: 999px;
+        padding: 0 14px;
       }
 
       .site-nav .nav-cta {
@@ -1999,8 +2059,12 @@
 
       .site-header__inner {
         min-height: 68px;
-        border-radius: 26px;
+        border-radius: 999px;
         padding: 8px 10px 8px 14px;
+      }
+
+      .brand {
+        gap: 10px;
       }
 
       .brand__tagline {
