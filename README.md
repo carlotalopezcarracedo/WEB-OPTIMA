@@ -29,13 +29,13 @@ git push -u origin main
 4. En `Build and deployment`, selecciona `GitHub Actions` como fuente.
 5. El workflow `.github/workflows/pages.yml` publicará la web en cada push a `main`.
 
-La web quedará disponible en la URL que GitHub indique, normalmente:
+El dominio público y canónico del proyecto es:
 
 ```text
-https://carlotalopezcarracedo.github.io/WEB-OPTIMA/
+https://optimamercado.com/
 ```
 
-Si cambias el nombre del repositorio o usas un dominio propio, revisa las URLs de `sitemap.xml`, `robots.txt` y las etiquetas `canonical` del HTML.
+Si cambia el dominio, actualiza a la vez `sitemap.xml`, `robots.txt`, los enlaces `canonical`, Open Graph y los datos estructurados del HTML.
 
 ## Notas
 

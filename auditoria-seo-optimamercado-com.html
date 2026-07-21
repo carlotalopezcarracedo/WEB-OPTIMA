@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Auditoría SEO de optimamercado.com · 21/07/2026</title>
+  <style>
+    :root {
+      --navy: #071f3b;
+      --blue: #165a8f;
+      --green: #70c94f;
+      --lime: #c5e84a;
+      --ink: #172235;
+      --muted: #637083;
+      --line: #dbe5ef;
+      --surface: #f4f8fb;
+      --white: #fff;
+      --ok: #19743c;
+      --ok-bg: #eaf8ef;
+      --warn: #916000;
+      --warn-bg: #fff6dc;
+      --error: #ad2c23;
+      --error-bg: #fff0ed;
+      --radius: 16px;
+      --shadow: 0 18px 48px rgba(7, 31, 59, .1);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--surface); font: 16px/1.55 Arial, sans-serif; }
+    a { color: var(--blue); }
+    button { font: inherit; }
+    .wrap { width: min(1160px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { color: var(--white); background: linear-gradient(135deg, var(--navy), #124c78); padding: 54px 0 42px; }
+    .eyebrow { margin: 0 0 8px; color: var(--lime); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; }
+    h1, h2, h3 { line-height: 1.16; }
+    h1 { max-width: 760px; margin: 0; font-size: clamp(2rem, 5vw, 4rem); }
+    .hero-meta { margin: 18px 0 0; color: #d4e6f3; }
+    .hero-grid { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: end; }
+    .score { width: 160px; aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; border: 14px solid var(--lime); background: rgba(255,255,255,.08); box-shadow: inset 0 0 0 1px rgba(255,255,255,.18); }
+    .score strong { display: block; font-size: 3.1rem; line-height: .9; }
+    .score span { display: block; margin-top: 7px; text-align: center; font-weight: 700; color: #e7f3fa; }
+    nav { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.95); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
+    nav .wrap { display: flex; gap: 8px; overflow-x: auto; padding-block: 11px; }
+    nav a { flex: 0 0 auto; padding: 8px 12px; border-radius: 999px; color: var(--navy); text-decoration: none; font-weight: 700; font-size: .9rem; }
+    nav a:hover, nav a:focus-visible { background: #eaf3f9; }
+    main { padding: 34px 0 70px; }
+    section { scroll-margin-top: 78px; margin-bottom: 34px; }
+    .section-title { margin: 0 0 8px; color: var(--navy); font-size: clamp(1.55rem, 3vw, 2.25rem); }
+    .section-intro { max-width: 830px; margin: 0 0 20px; color: var(--muted); }
+    .callout { padding: 18px 20px; border: 1px solid #bad7ea; border-left: 5px solid var(--blue); border-radius: 12px; background: #edf7fd; }
+    .summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 20px; }
+    .metric, .card, .priority, details { border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow); }
+    .metric { padding: 20px; }
+    .metric span { display: block; color: var(--muted); font-size: .88rem; }
+    .metric strong { display: block; margin-top: 4px; color: var(--navy); font-size: 2rem; }
+    .metric.good strong { color: var(--ok); }
+    .metric.warn strong { color: var(--warn); }
+    .metric.error strong { color: var(--error); }
+    .priorities { display: grid; gap: 14px; counter-reset: priority; }
+    .priority { position: relative; padding: 22px 22px 22px 74px; counter-increment: priority; }
+    .priority::before { content: counter(priority); position: absolute; left: 22px; top: 22px; width: 36px; height: 36px; display: grid; place-items: center; color: var(--white); background: var(--navy); border-radius: 50%; font-weight: 800; }
+    .priority h3 { margin: 0 0 8px; }
+    .priority p { margin: 5px 0; }
+    .label { display: inline-flex; align-items: center; gap: 6px; padding: 4px 9px; border-radius: 999px; font-size: .78rem; font-weight: 800; }
+    .label.ok { color: var(--ok); background: var(--ok-bg); }
+    .label.warn { color: var(--warn); background: var(--warn-bg); }
+    .label.error { color: var(--error); background: var(--error-bg); }
+    code { padding: 2px 5px; border-radius: 5px; background: #edf2f6; font: .9em Consolas, monospace; overflow-wrap: anywhere; }
+    .categories { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .card { padding: 21px; }
+    .card-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .card h3 { margin: 0; color: var(--navy); }
+    .card-score { font-size: 1.35rem; font-weight: 900; color: var(--blue); }
+    .bar { height: 9px; margin: 12px 0 16px; overflow: hidden; border-radius: 99px; background: #e5edf3; }
+    .bar span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--blue), var(--green)); }
+    .findings { margin: 0; padding: 0; list-style: none; }
+    .findings li { position: relative; margin-top: 9px; padding-left: 23px; }
+    .findings li::before { position: absolute; left: 0; font-weight: 900; }
+    .findings .ok::before { content: "✓"; color: var(--ok); }
+    .findings .warn::before { content: "!"; color: var(--warn); }
+    .findings .error::before { content: "×"; color: var(--error); }
+    details { overflow: hidden; }
+    summary { padding: 18px 20px; cursor: pointer; color: var(--navy); font-weight: 800; }
+    .table-wrap { overflow-x: auto; border-top: 1px solid var(--line); }
+    table { width: 100%; border-collapse: collapse; min-width: 900px; }
+    th, td { padding: 13px 15px; border-bottom: 1px solid var(--line); vertical-align: top; text-align: left; }
+    th { color: var(--navy); background: #edf4f8; font-size: .82rem; text-transform: uppercase; letter-spacing: .04em; }
+    tr:last-child td { border-bottom: 0; }
+    .next { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .actions { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .button { border: 0; border-radius: 10px; padding: 11px 15px; color: var(--white); background: var(--navy); cursor: pointer; font-weight: 800; }
+    .button:hover { background: var(--blue); }
+    footer { padding: 24px 0 38px; color: var(--muted); text-align: center; }
+    @media (max-width: 800px) {
+      .hero-grid, .next { grid-template-columns: 1fr; }
+      .score { width: 132px; }
+      .summary, .categories { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 520px) {
+      .summary, .categories { grid-template-columns: 1fr; }
+      .priority { padding-left: 62px; }
+      .priority::before { left: 16px; }
+    }
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav, .actions { display: none; }
+      .hero { padding: 24px 0; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .wrap { width: 100%; }
+      main { padding-bottom: 0; }
+      section { break-inside: avoid; margin-bottom: 20px; }
+      .metric, .card, .priority, details { box-shadow: none; }
+      details[open] { break-inside: auto; }
+      .table-wrap { overflow: visible; }
+      table { min-width: 0; font-size: 8pt; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Auditoría SEO técnica y on-page</p>
+        <h1>optimamercado.com</h1>
+        <p class="hero-meta">Auditoría de producción · 21 de julio de 2026 · Sin comparativa de competidores</p>
+      </div>
+      <div class="score" role="img" aria-label="Puntuación SEO 66 sobre 100"><div><strong>66</strong><span>Mejorable</span></div></div>
+    </div>
+  </header>
+
+  <nav aria-label="Navegación del informe">
+    <div class="wrap">
+      <a href="#resumen">Resumen</a>
+      <a href="#prioridades">Prioridades</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#detalle">Detalle técnico</a>
+      <a href="#siguientes">Siguientes pasos</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section id="resumen">
+      <h2 class="section-title">Resumen ejecutivo</h2>
+      <p class="section-intro">La página tiene contenido sólido, buena jerarquía de encabezados y todos los enlaces esenciales responden. La pérdida principal estaba en señales técnicas contradictorias: la web publicada en <strong>optimamercado.com</strong> declaraba como canónico el repositorio de GitHub y también lo enviaba en robots y sitemap.</p>
+      <div class="callout"><strong>Resultado de la intervención:</strong> las correcciones aplicadas en el código elevan la estimación técnica a <strong>95/100</strong> cuando se publiquen. El 66/100 refleja únicamente el estado real observado en producción al iniciar la auditoría.</div>
+      <div class="summary">
+        <article class="metric warn"><span>Puntuación publicada</span><strong>66/100</strong></article>
+        <article class="metric error"><span>Problemas críticos</span><strong>5</strong></article>
+        <article class="metric warn"><span>Advertencias</span><strong>6</strong></article>
+        <article class="metric good"><span>Tests aprobados</span><strong>29</strong></article>
+      </div>
+    </section>
+
+    <section id="prioridades">
+      <h2 class="section-title">Top 5 correcciones prioritarias</h2>
+      <p class="section-intro">Ordenadas por impacto esperado sobre rastreo, consolidación de señales, presentación del resultado y comprensión semántica.</p>
+      <div class="priorities">
+        <article class="priority">
+          <span class="label ok">Aplicado en código</span>
+          <h3>Unificar las URL canónicas en optimamercado.com</h3>
+          <p><strong>Qué estaba mal:</strong> la portada y las páginas legales declaraban como canonical una URL de <code>carlotalopezcarracedo.github.io</code>.</p>
+          <p><strong>Por qué importa:</strong> indicaba a Google que otro host era la versión principal y podía transferir señales fuera del dominio comercial.</p>
+          <p><strong>Corrección:</strong> canonical, Open Graph e interlinking apuntan ahora a las URL HTTPS limpias de <code>optimamercado.com</code>.</p>
+        </article>
+        <article class="priority">
+          <span class="label ok">Aplicado en código</span>
+          <h3>Reparar robots.txt y sitemap.xml</h3>
+          <p><strong>Qué estaba mal:</strong> ambos archivos publicaban las URL del repositorio GitHub.</p>
+          <p><strong>Por qué importa:</strong> el sitemap es una señal de canonicalización y descubrimiento; no debe contradecir el HTML.</p>
+          <p><strong>Corrección:</strong> se declara <code>https://optimamercado.com/sitemap.xml</code> y las cuatro URL canónicas del dominio real.</p>
+        </article>
+        <article class="priority">
+          <span class="label ok">Aplicado en código</span>
+          <h3>Publicar un favicon estable y rastreable</h3>
+          <p><strong>Qué estaba mal:</strong> <code>/favicon.ico</code> devolvía 404 y solo había un PNG genérico enlazado dentro de <code>/public/</code>.</p>
+          <p><strong>Por qué importa:</strong> Googlebot necesita rastrear la portada y la URL estable del favicon para que el sitio sea elegible en los resultados.</p>
+          <p><strong>Corrección:</strong> ICO raíz con variantes 16/32/48/96, PNG 48/96, Apple 180 y manifest con 192/512.</p>
+        </article>
+        <article class="priority">
+          <span class="label ok">Aplicado en código</span>
+          <h3>Añadir datos estructurados verificables</h3>
+          <p><strong>Qué estaba mal:</strong> no existía JSON-LD.</p>
+          <p><strong>Por qué importa:</strong> Google no recibía una definición explícita del negocio, el servicio gratuito ni las preguntas frecuentes visibles.</p>
+          <p><strong>Corrección:</strong> grafo JSON-LD con <code>LocalBusiness</code>, <code>WebSite</code>, <code>Service</code> y <code>FAQPage</code>, sin inventar valoraciones, horarios ni teléfono.</p>
+        </article>
+        <article class="priority">
+          <span class="label warn">Pendiente en Cloudflare</span>
+          <h3>Forzar HTTP → HTTPS con redirección permanente</h3>
+          <p><strong>Qué está mal:</strong> <code>http://optimamercado.com/</code> respondió 200 con el mismo HTML, en lugar de redirigir.</p>
+          <p><strong>Por qué importa:</strong> crea una variante duplicada por protocolo y debilita la consolidación de señales.</p>
+          <p><strong>Cómo corregir:</strong> activar “Always Use HTTPS” o una Redirect Rule 301 en Cloudflare. No puede corregirse de forma fiable desde un HTML estático.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="categorias">
+      <h2 class="section-title">Desglose por categoría</h2>
+      <p class="section-intro">Puntuación inicial ponderada según la metodología de la auditoría adjunta.</p>
+      <div class="categories">
+        <article class="card"><div class="card-head"><h3>Meta tags · 20%</h3><span class="card-score">70</span></div><div class="bar"><span style="width:70%"></span></div><ul class="findings"><li class="ok">Title de 58 caracteres y descriptivo.</li><li class="ok">Description presente, viewport, robots e idioma correctos.</li><li class="warn">Description en el límite alto: 161 caracteres.</li><li class="error">Canonical apuntaba al host de GitHub.</li></ul></article>
+        <article class="card"><div class="card-head"><h3>Headings · 15%</h3><span class="card-score">95</span></div><div class="bar"><span style="width:95%"></span></div><ul class="findings"><li class="ok">Un único H1.</li><li class="ok">Jerarquía H1 → H2 → H3 sin saltos problemáticos.</li><li class="ok">H1 y subtítulo alineados con revisar la factura de la luz.</li><li class="ok">H2 descriptivos y útiles para escaneo.</li></ul></article>
+        <article class="card"><div class="card-head"><h3>Imágenes · 10%</h3><span class="card-score">65</span></div><div class="bar"><span style="width:65%"></span></div><ul class="findings"><li class="ok">3 imágenes; todas tienen alt o tratamiento decorativo.</li><li class="ok">Logos con nombres de archivo comprensibles.</li><li class="warn">No había dimensiones intrínsecas.</li><li class="warn">No había carga diferida bajo el primer pliegue.</li><li class="warn">Solo PNG; los logos originales son mayores que su tamaño visible.</li></ul></article>
+        <article class="card"><div class="card-head"><h3>Enlaces · 10%</h3><span class="card-score">90</span></div><div class="bar"><span style="width:90%"></span></div><ul class="findings"><li class="ok">Navegación, legales y CTA responden correctamente.</li><li class="ok">Anclas descriptivas y navegación accesible.</li><li class="ok">El flujo de factura llega a la aplicación operativa.</li><li class="warn">Los enlaces <code>.html</code> añadían una redirección a URL limpia.</li></ul></article>
+        <article class="card"><div class="card-head"><h3>Open Graph · 10%</h3><span class="card-score">55</span></div><div class="bar"><span style="width:55%"></span></div><ul class="findings"><li class="ok">OG y Twitter básicos presentes.</li><li class="ok"><code>og:type</code> y locale correctos.</li><li class="error"><code>og:url</code> apuntaba al host de GitHub.</li><li class="error">OG/Twitter image usaba también el dominio equivocado.</li><li class="warn">Faltaban dimensiones y texto alternativo social.</li></ul></article>
+        <article class="card"><div class="card-head"><h3>Schema · 10%</h3><span class="card-score">0</span></div><div class="bar"><span style="width:0%"></span></div><ul class="findings"><li class="error">No había JSON-LD, microdatos ni RDFa.</li><li class="error">Negocio, sitio y servicio no estaban descritos.</li><li class="error">Las ocho FAQ visibles no tenían marcado semántico.</li><li class="ok">El contenido visible permitía añadir schema sin inventar datos.</li></ul></article>
+        <article class="card"><div class="card-head"><h3>Técnico · 15%</h3><span class="card-score">45</span></div><div class="bar"><span style="width:45%"></span></div><ul class="findings"><li class="ok">HTTPS, robots y sitemap responden 200.</li><li class="ok">Portada: 83.646 bytes y ~0,29 s en la muestra.</li><li class="error">Robots y sitemap señalaban otro dominio.</li><li class="error"><code>/favicon.ico</code> devolvía 404.</li><li class="error">HTTP servía 200 sin redirección a HTTPS.</li></ul></article>
+        <article class="card"><div class="card-head"><h3>Contenido · 10%</h3><span class="card-score">95</span></div><div class="bar"><span style="width:95%"></span></div><ul class="findings"><li class="ok">Contenido principal ampliamente superior a 300 palabras.</li><li class="ok">Propuesta, proceso, resultados y FAQ cubren la intención.</li><li class="ok">Señales locales, identidad y contacto visibles.</li><li class="ok">Sin promesas engañosas de ahorro garantizado.</li></ul></article>
+      </div>
+    </section>
+
+    <section id="detalle">
+      <h2 class="section-title">Detalle técnico completo</h2>
+      <p class="section-intro">Evidencias tomadas de la web publicada. Abre la tabla para revisar cada hallazgo y su tratamiento.</p>
+      <details open>
+        <summary>Ver todos los hallazgos</summary>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Categoría</th><th>Estado</th><th>Hallazgo / evidencia</th><th>Acción</th></tr></thead>
+            <tbody>
+              <tr><td>Meta</td><td><span class="label ok">Aprobado</span></td><td>Title presente, 58 caracteres.</td><td>Reorientado a la búsqueda “revisar factura de la luz gratis”.</td></tr>
+              <tr><td>Meta</td><td><span class="label warn">Advertencia</span></td><td>Description de 161 caracteres.</td><td>Reducida y alineada con el servicio.</td></tr>
+              <tr><td>Meta</td><td><span class="label error">Error</span></td><td>Canonical de la home: URL de GitHub Pages.</td><td>Corregida a <code>https://optimamercado.com/</code>.</td></tr>
+              <tr><td>Meta</td><td><span class="label error">Error</span></td><td>Canonical de las tres páginas legales: GitHub + extensión.</td><td>Corregidas a las URL limpias del dominio real.</td></tr>
+              <tr><td>Headings</td><td><span class="label ok">Aprobado</span></td><td>Exactamente un H1 y una jerarquía coherente.</td><td>Sin cambio estructural necesario.</td></tr>
+              <tr><td>Imágenes</td><td><span class="label ok">Aprobado</span></td><td>3/3 imágenes con alt o rol decorativo.</td><td>Conservado.</td></tr>
+              <tr><td>Imágenes</td><td><span class="label warn">Advertencia</span></td><td>3/3 sin width y height; logos de 3310 px servidos a 132–166 px.</td><td>Añadidas dimensiones y variantes visuales de 640 px (8–22 KB).</td></tr>
+              <tr><td>Imágenes</td><td><span class="label warn">Advertencia</span></td><td>Logo del footer cargado inmediatamente.</td><td>Añadido <code>loading="lazy"</code> y <code>decoding="async"</code>.</td></tr>
+              <tr><td>Enlaces</td><td><span class="label ok">Aprobado</span></td><td>Home, legales, recursos y CTA comprobados con HTTP 200 final.</td><td>Sin enlaces rotos detectados.</td></tr>
+              <tr><td>Enlaces</td><td><span class="label warn">Advertencia</span></td><td>Las URL legales <code>.html</code> redirigían a ruta limpia.</td><td>Interlinking actualizado a las canónicas.</td></tr>
+              <tr><td>Social</td><td><span class="label error">Error</span></td><td>OG URL e imagen señalaban GitHub.</td><td>Actualizadas al dominio comercial.</td></tr>
+              <tr><td>Social</td><td><span class="label warn">Advertencia</span></td><td>Imagen sin dimensiones ni alt declarados y con proporción poco adecuada para tarjeta grande.</td><td>Creada una imagen de marca 1200×630 y añadidos tipo, dimensiones y alt.</td></tr>
+              <tr><td>Social</td><td><span class="label warn">Advertencia</span></td><td>Las páginas legales no tenían tarjetas sociales.</td><td>Añadidos OG y Twitter coherentes.</td></tr>
+              <tr><td>Schema</td><td><span class="label error">Error</span></td><td>No existía ningún bloque estructurado.</td><td>Añadido grafo JSON-LD verificable.</td></tr>
+              <tr><td>Schema</td><td><span class="label ok">Aprobado</span></td><td>Las 8 preguntas del schema coinciden con las FAQ visibles.</td><td>Validar de nuevo tras cada cambio de copy.</td></tr>
+              <tr><td>Técnico</td><td><span class="label ok">Aprobado</span></td><td>HTTPS devuelve 200; muestra de respuesta ~0,29 s.</td><td>Monitorizar Core Web Vitals con datos de campo.</td></tr>
+              <tr><td>Técnico</td><td><span class="label error">Error</span></td><td>Robots declaraba el sitemap de GitHub.</td><td>Corregido al sitemap del dominio.</td></tr>
+              <tr><td>Técnico</td><td><span class="label error">Error</span></td><td>Las 4 entradas del sitemap eran de GitHub.</td><td>Corregidas y actualizadas a 2026-07-21.</td></tr>
+              <tr><td>Técnico</td><td><span class="label error">Error</span></td><td><code>/favicon.ico</code> devolvía 404.</td><td>Creado ICO raíz y variantes PNG.</td></tr>
+              <tr><td>Técnico</td><td><span class="label error">Error</span></td><td>HTTP devolvía 200 con contenido duplicado.</td><td>Pendiente Redirect Rule 301 en Cloudflare.</td></tr>
+              <tr><td>Técnico</td><td><span class="label ok">Aprobado</span></td><td>Robots permite rastreo; no existe bloqueo accidental.</td><td>Conservado.</td></tr>
+              <tr><td>Contenido</td><td><span class="label ok">Aprobado</span></td><td>Contenido extenso, útil y centrado en una intención clara.</td><td>Conservar tono y actualizar solo con datos verificables.</td></tr>
+              <tr><td>Contenido</td><td><span class="label ok">Aprobado</span></td><td>Identidad, email y domicilio visibles.</td><td>Conservar consistencia con el Perfil de Empresa de Google.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </section>
+
+    <section id="siguientes">
+      <h2 class="section-title">Publicación y seguimiento</h2>
+      <div class="next">
+        <article class="card"><h3>Después de desplegar</h3><ul><li>Comprobar 200 en <code>/favicon.ico</code>, <code>/robots.txt</code> y <code>/sitemap.xml</code>.</li><li>Validar el JSON-LD con Rich Results Test o Schema Markup Validator.</li><li>Enviar el sitemap del dominio en Google Search Console.</li><li>Solicitar indexación de la portada para acelerar el nuevo rastreo.</li></ul></article>
+        <article class="card"><h3>Fuera del código</h3><ul><li>Activar redirección permanente HTTP → HTTPS en Cloudflare.</li><li>Mantener estable la URL <code>/favicon.ico</code>.</li><li>Confirmar que nombre, dirección y categoría coinciden con el Perfil de Empresa de Google.</li><li>Revisar Search Console durante 2–4 semanas; Google decide cuándo vuelve a mostrar el favicon.</li></ul></article>
+      </div>
+      <div class="actions"><button class="button" type="button" onclick="window.print()">Imprimir o guardar en PDF</button></div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">Informe autocontenido · Datos reales observados el 21/07/2026 · Óptima Mercado</div></footer>
+  <script>
+    document.querySelectorAll('nav a').forEach(function (link) {
+      link.addEventListener('click', function () { link.blur(); });
+    });
+  </script>
+</body>
+</html>
