@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://carlotalopezcarracedo.github.io/WEB-OPTIMA/sitemap.xml
+Sitemap: https://optimamercado.com/sitemap.xml
