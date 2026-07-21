@@ -124,7 +124,7 @@
         <h1>optimamercado.com</h1>
         <p class="hero-meta">Auditoría de producción · 21 de julio de 2026 · Sin comparativa de competidores</p>
       </div>
-      <div class="score" role="img" aria-label="Puntuación SEO 66 sobre 100"><div><strong>66</strong><span>Mejorable</span></div></div>
+      <div class="score" role="img" aria-label="Puntuación SEO 94 sobre 100"><div><strong>94</strong><span>Muy bueno</span></div></div>
     </div>
   </header>
 
@@ -141,13 +141,13 @@
   <main class="wrap">
     <section id="resumen">
       <h2 class="section-title">Resumen ejecutivo</h2>
-      <p class="section-intro">La página tiene contenido sólido, buena jerarquía de encabezados y todos los enlaces esenciales responden. La pérdida principal estaba en señales técnicas contradictorias: la web publicada en <strong>optimamercado.com</strong> declaraba como canónico el repositorio de GitHub y también lo enviaba en robots y sitemap.</p>
-      <div class="callout"><strong>Resultado de la intervención:</strong> las correcciones aplicadas en el código elevan la estimación técnica a <strong>95/100</strong> cuando se publiquen. El 66/100 refleja únicamente el estado real observado en producción al iniciar la auditoría.</div>
+      <p class="section-intro">La web tiene una base SEO sólida: portada con más de 1.000 palabras útiles, intención de búsqueda clara, jerarquía correcta, canonical coherente, sitemap, favicon, tarjetas sociales y datos estructurados. Esta revisión amplía la auditoría a la landing <strong>/optima</strong>, las páginas legales y el flujo de conversión.</p>
+      <div class="callout"><strong>Resultado actual:</strong> la estimación técnica queda en <strong>94/100</strong> después de las correcciones de código. No se asigna una puntuación de Core Web Vitals: PageSpeed respondió 429 y Lighthouse local agotó el tiempo, por lo que esa métrica debe verificarse con datos de campo en Search Console.</div>
       <div class="summary">
-        <article class="metric warn"><span>Puntuación publicada</span><strong>66/100</strong></article>
-        <article class="metric error"><span>Problemas críticos</span><strong>5</strong></article>
-        <article class="metric warn"><span>Advertencias</span><strong>6</strong></article>
-        <article class="metric good"><span>Tests aprobados</span><strong>29</strong></article>
+        <article class="metric good"><span>Puntuación técnica</span><strong>94/100</strong></article>
+        <article class="metric good"><span>Problemas críticos</span><strong>0</strong></article>
+        <article class="metric warn"><span>Advertencias</span><strong>4</strong></article>
+        <article class="metric good"><span>Tests aprobados</span><strong>34</strong></article>
       </div>
     </section>
 
@@ -157,54 +157,54 @@
       <div class="priorities">
         <article class="priority">
           <span class="label ok">Aplicado en código</span>
-          <h3>Unificar las URL canónicas en optimamercado.com</h3>
-          <p><strong>Qué estaba mal:</strong> la portada y las páginas legales declaraban como canonical una URL de <code>carlotalopezcarracedo.github.io</code>.</p>
-          <p><strong>Por qué importa:</strong> indicaba a Google que otro host era la versión principal y podía transferir señales fuera del dominio comercial.</p>
-          <p><strong>Corrección:</strong> canonical, Open Graph e interlinking apuntan ahora a las URL HTTPS limpias de <code>optimamercado.com</code>.</p>
+          <h3>Optimizar la landing de entrada /optima</h3>
+          <p><strong>Qué estaba mal:</strong> el selector de Mercado y Canales tenía un title de 26 caracteres, metadata social incompleta, cero schema, logos de 3310 px sin dimensiones y enlaces legales con extensión.</p>
+          <p><strong>Por qué importa:</strong> es la URL de entrada desde el Perfil de Empresa de Google y debe cargar de forma estable, explicar el destino y emitir señales coherentes.</p>
+          <p><strong>Corrección:</strong> title y description orientados a energía, grafo <code>WebPage + ItemList</code>, tarjetas sociales completas, favicon estable, logos de 640 px con dimensiones y URL internas limpias.</p>
         </article>
         <article class="priority">
           <span class="label ok">Aplicado en código</span>
-          <h3>Reparar robots.txt y sitemap.xml</h3>
-          <p><strong>Qué estaba mal:</strong> ambos archivos publicaban las URL del repositorio GitHub.</p>
-          <p><strong>Por qué importa:</strong> el sitemap es una señal de canonicalización y descubrimiento; no debe contradecir el HTML.</p>
-          <p><strong>Corrección:</strong> se declara <code>https://optimamercado.com/sitemap.xml</code> y las cuatro URL canónicas del dominio real.</p>
+          <h3>Alinear portada, H1 y descripción con la búsqueda principal</h3>
+          <p><strong>Qué estaba mal:</strong> el H1 hablaba de “pagar de más en la luz”, pero no incluía la entidad completa “factura de la luz”; la descripción se quedaba en 140 caracteres.</p>
+          <p><strong>Por qué importa:</strong> title, H1, primer bloque y description deben reforzar de forma natural la misma intención: revisar gratis una factura de la luz.</p>
+          <p><strong>Corrección:</strong> H1 actualizado a “¿Pagas de más en tu factura de la luz?” y description ampliada a 156 caracteres con la promesa “Sin compromiso”.</p>
         </article>
         <article class="priority">
           <span class="label ok">Aplicado en código</span>
-          <h3>Publicar un favicon estable y rastreable</h3>
-          <p><strong>Qué estaba mal:</strong> <code>/favicon.ico</code> devolvía 404 y solo había un PNG genérico enlazado dentro de <code>/public/</code>.</p>
-          <p><strong>Por qué importa:</strong> Googlebot necesita rastrear la portada y la URL estable del favicon para que el sitio sea elegible en los resultados.</p>
-          <p><strong>Corrección:</strong> ICO raíz con variantes 16/32/48/96, PNG 48/96, Apple 180 y manifest con 192/512.</p>
-        </article>
-        <article class="priority">
-          <span class="label ok">Aplicado en código</span>
-          <h3>Añadir datos estructurados verificables</h3>
-          <p><strong>Qué estaba mal:</strong> no existía JSON-LD.</p>
-          <p><strong>Por qué importa:</strong> Google no recibía una definición explícita del negocio, el servicio gratuito ni las preguntas frecuentes visibles.</p>
-          <p><strong>Corrección:</strong> grafo JSON-LD con <code>LocalBusiness</code>, <code>WebSite</code>, <code>Service</code> y <code>FAQPage</code>, sin inventar valoraciones, horarios ni teléfono.</p>
+          <h3>Eliminar el aislamiento de /optima y completar el grafo semántico</h3>
+          <p><strong>Qué estaba mal:</strong> la landing estaba en el sitemap, pero no recibía ningún enlace desde la portada; la home tampoco declaraba explícitamente su entidad <code>WebPage</code> ni imagen principal.</p>
+          <p><strong>Por qué importa:</strong> el enlazado interno facilita descubrimiento y transmite contexto; un grafo conectado evita entidades sueltas.</p>
+          <p><strong>Corrección:</strong> enlace descriptivo en el mapa del sitio, <code>WebPage</code> e <code>ImageObject</code> en portada y referencias estables entre negocio, web, servicio y contenido.</p>
         </article>
         <article class="priority">
           <span class="label warn">Pendiente en Cloudflare</span>
-          <h3>Forzar HTTP → HTTPS con redirección permanente</h3>
-          <p><strong>Qué está mal:</strong> <code>http://optimamercado.com/</code> respondió 200 con el mismo HTML, en lugar de redirigir.</p>
-          <p><strong>Por qué importa:</strong> crea una variante duplicada por protocolo y debilita la consolidación de señales.</p>
-          <p><strong>Cómo corregir:</strong> activar “Always Use HTTPS” o una Redirect Rule 301 en Cloudflare. No puede corregirse de forma fiable desde un HTML estático.</p>
+          <h3>Crear el host www y redirigirlo al dominio canónico</h3>
+          <p><strong>Qué está mal:</strong> <code>www.optimamercado.com</code> no resuelve por DNS, aunque el dominio sin www funciona correctamente.</p>
+          <p><strong>Por qué importa:</strong> enlaces históricos o escritos con www fallan antes de llegar a una redirección y pueden desperdiciar señales o visitas.</p>
+          <p><strong>Cómo corregir:</strong> crear un registro DNS proxied para <code>www</code> y una Redirect Rule 301 hacia <code>https://optimamercado.com/$1</code>.</p>
+        </article>
+        <article class="priority">
+          <span class="label warn">Pendiente de datos externos</span>
+          <h3>Consolidar indexación y medir Core Web Vitals reales</h3>
+          <p><strong>Qué falta:</strong> la portada aparece rastreada, pero <code>/optima</code> todavía es reciente; no hay datos de Search Console disponibles y PageSpeed limitó la consulta.</p>
+          <p><strong>Por qué importa:</strong> una auditoría de código no confirma indexación, consultas, impresiones ni experiencia real de usuarios.</p>
+          <p><strong>Cómo corregir:</strong> enviar el sitemap en Search Console, inspeccionar <code>/</code> y <code>/optima</code>, solicitar indexación y revisar LCP, INP y CLS con datos de campo.</p>
         </article>
       </div>
     </section>
 
     <section id="categorias">
       <h2 class="section-title">Desglose por categoría</h2>
-      <p class="section-intro">Puntuación inicial ponderada según la metodología de la auditoría adjunta.</p>
+      <p class="section-intro">Puntuación ponderada del estado corregido según la metodología de la auditoría adjunta.</p>
       <div class="categories">
-        <article class="card"><div class="card-head"><h3>Meta tags · 20%</h3><span class="card-score">70</span></div><div class="bar"><span style="width:70%"></span></div><ul class="findings"><li class="ok">Title de 58 caracteres y descriptivo.</li><li class="ok">Description presente, viewport, robots e idioma correctos.</li><li class="warn">Description en el límite alto: 161 caracteres.</li><li class="error">Canonical apuntaba al host de GitHub.</li></ul></article>
-        <article class="card"><div class="card-head"><h3>Headings · 15%</h3><span class="card-score">95</span></div><div class="bar"><span style="width:95%"></span></div><ul class="findings"><li class="ok">Un único H1.</li><li class="ok">Jerarquía H1 → H2 → H3 sin saltos problemáticos.</li><li class="ok">H1 y subtítulo alineados con revisar la factura de la luz.</li><li class="ok">H2 descriptivos y útiles para escaneo.</li></ul></article>
-        <article class="card"><div class="card-head"><h3>Imágenes · 10%</h3><span class="card-score">65</span></div><div class="bar"><span style="width:65%"></span></div><ul class="findings"><li class="ok">3 imágenes; todas tienen alt o tratamiento decorativo.</li><li class="ok">Logos con nombres de archivo comprensibles.</li><li class="warn">No había dimensiones intrínsecas.</li><li class="warn">No había carga diferida bajo el primer pliegue.</li><li class="warn">Solo PNG; los logos originales son mayores que su tamaño visible.</li></ul></article>
-        <article class="card"><div class="card-head"><h3>Enlaces · 10%</h3><span class="card-score">90</span></div><div class="bar"><span style="width:90%"></span></div><ul class="findings"><li class="ok">Navegación, legales y CTA responden correctamente.</li><li class="ok">Anclas descriptivas y navegación accesible.</li><li class="ok">El flujo de factura llega a la aplicación operativa.</li><li class="warn">Los enlaces <code>.html</code> añadían una redirección a URL limpia.</li></ul></article>
-        <article class="card"><div class="card-head"><h3>Open Graph · 10%</h3><span class="card-score">55</span></div><div class="bar"><span style="width:55%"></span></div><ul class="findings"><li class="ok">OG y Twitter básicos presentes.</li><li class="ok"><code>og:type</code> y locale correctos.</li><li class="error"><code>og:url</code> apuntaba al host de GitHub.</li><li class="error">OG/Twitter image usaba también el dominio equivocado.</li><li class="warn">Faltaban dimensiones y texto alternativo social.</li></ul></article>
-        <article class="card"><div class="card-head"><h3>Schema · 10%</h3><span class="card-score">0</span></div><div class="bar"><span style="width:0%"></span></div><ul class="findings"><li class="error">No había JSON-LD, microdatos ni RDFa.</li><li class="error">Negocio, sitio y servicio no estaban descritos.</li><li class="error">Las ocho FAQ visibles no tenían marcado semántico.</li><li class="ok">El contenido visible permitía añadir schema sin inventar datos.</li></ul></article>
-        <article class="card"><div class="card-head"><h3>Técnico · 15%</h3><span class="card-score">45</span></div><div class="bar"><span style="width:45%"></span></div><ul class="findings"><li class="ok">HTTPS, robots y sitemap responden 200.</li><li class="ok">Portada: 83.646 bytes y ~0,29 s en la muestra.</li><li class="error">Robots y sitemap señalaban otro dominio.</li><li class="error"><code>/favicon.ico</code> devolvía 404.</li><li class="error">HTTP servía 200 sin redirección a HTTPS.</li></ul></article>
-        <article class="card"><div class="card-head"><h3>Contenido · 10%</h3><span class="card-score">95</span></div><div class="bar"><span style="width:95%"></span></div><ul class="findings"><li class="ok">Contenido principal ampliamente superior a 300 palabras.</li><li class="ok">Propuesta, proceso, resultados y FAQ cubren la intención.</li><li class="ok">Señales locales, identidad y contacto visibles.</li><li class="ok">Sin promesas engañosas de ahorro garantizado.</li></ul></article>
+        <article class="card"><div class="card-head"><h3>Meta tags · 20%</h3><span class="card-score">96</span></div><div class="bar"><span style="width:96%"></span></div><ul class="findings"><li class="ok">Titles únicos; portada 49 caracteres y /optima 34.</li><li class="ok">Descriptions únicas; portada 156 caracteres y /optima 146.</li><li class="ok">Idioma, viewport, robots y canonical correctos en todas las páginas indexables.</li><li class="ok">La 404 declara <code>noindex, follow</code>.</li></ul></article>
+        <article class="card"><div class="card-head"><h3>Headings · 15%</h3><span class="card-score">98</span></div><div class="bar"><span style="width:98%"></span></div><ul class="findings"><li class="ok">Exactamente un H1 por página.</li><li class="ok">Jerarquía H1 → H2 → H3 coherente.</li><li class="ok">El H1 principal contiene “factura de la luz”.</li><li class="ok">La landing /optima diferencia clientes y profesionales.</li></ul></article>
+        <article class="card"><div class="card-head"><h3>Imágenes · 10%</h3><span class="card-score">92</span></div><div class="bar"><span style="width:92%"></span></div><ul class="findings"><li class="ok">Todas las imágenes tienen alt o tratamiento decorativo.</li><li class="ok">Todas declaran width y height para reducir CLS.</li><li class="ok">Los logos visibles usan variantes de 640 px (8–22 KB).</li><li class="warn">Los recursos siguen en PNG; WebP/AVIF sería una mejora menor.</li></ul></article>
+        <article class="card"><div class="card-head"><h3>Enlaces · 10%</h3><span class="card-score">96</span></div><div class="bar"><span style="width:96%"></span></div><ul class="findings"><li class="ok">Portada, /optima, legales, sitemap, favicon, imagen social y CTA responden 200.</li><li class="ok">El CTA llega a la aplicación operativa.</li><li class="ok">/optima recibe un enlace interno descriptivo desde la portada.</li><li class="ok">Las URL legales usan rutas canónicas limpias.</li></ul></article>
+        <article class="card"><div class="card-head"><h3>Open Graph · 10%</h3><span class="card-score">96</span></div><div class="bar"><span style="width:96%"></span></div><ul class="findings"><li class="ok">OG y Twitter completos en todas las páginas indexables.</li><li class="ok">URL, imagen, tipo, dimensiones y alt declarados.</li><li class="ok">Imagen principal 1200×630 y accesible con HTTP 200.</li><li class="ok">/optima usa tarjeta de resumen coherente con su logotipo.</li></ul></article>
+        <article class="card"><div class="card-head"><h3>Schema · 10%</h3><span class="card-score">94</span></div><div class="bar"><span style="width:94%"></span></div><ul class="findings"><li class="ok">Grafo de portada: LocalBusiness, WebSite, WebPage, ImageObject, Service y FAQPage.</li><li class="ok">Las 8 FAQ coinciden con el contenido visible.</li><li class="ok">/optima declara WebPage e ItemList con sus dos destinos reales.</li><li class="ok">JSON válido sin reseñas, horarios ni teléfono inventados.</li></ul></article>
+        <article class="card"><div class="card-head"><h3>Técnico · 15%</h3><span class="card-score">84</span></div><div class="bar"><span style="width:84%"></span></div><ul class="findings"><li class="ok">HTTPS, redirección desde HTTP, robots, sitemap y favicon operativos.</li><li class="ok">Muestra de URLs esenciales: 0,14–0,45 s y respuesta final 200.</li><li class="warn"><code>www.optimamercado.com</code> no resuelve por DNS.</li><li class="warn">No se observó HSTS y faltan métricas de campo de Core Web Vitals.</li></ul></article>
+        <article class="card"><div class="card-head"><h3>Contenido · 10%</h3><span class="card-score">96</span></div><div class="bar"><span style="width:96%"></span></div><ul class="findings"><li class="ok">Portada con más de 1.000 palabras y una intención clara.</li><li class="ok">Propuesta, proceso, resultados y FAQ responden dudas reales.</li><li class="ok">Identidad, email, domicilio y señales locales visibles.</li><li class="ok">Sin promesas engañosas de ahorro garantizado.</li></ul></article>
       </div>
     </section>
 
@@ -217,29 +217,28 @@
           <table>
             <thead><tr><th>Categoría</th><th>Estado</th><th>Hallazgo / evidencia</th><th>Acción</th></tr></thead>
             <tbody>
-              <tr><td>Meta</td><td><span class="label ok">Aprobado</span></td><td>Title presente, 58 caracteres.</td><td>Reorientado a la búsqueda “revisar factura de la luz gratis”.</td></tr>
-              <tr><td>Meta</td><td><span class="label warn">Advertencia</span></td><td>Description de 161 caracteres.</td><td>Reducida y alineada con el servicio.</td></tr>
-              <tr><td>Meta</td><td><span class="label error">Error</span></td><td>Canonical de la home: URL de GitHub Pages.</td><td>Corregida a <code>https://optimamercado.com/</code>.</td></tr>
-              <tr><td>Meta</td><td><span class="label error">Error</span></td><td>Canonical de las tres páginas legales: GitHub + extensión.</td><td>Corregidas a las URL limpias del dominio real.</td></tr>
-              <tr><td>Headings</td><td><span class="label ok">Aprobado</span></td><td>Exactamente un H1 y una jerarquía coherente.</td><td>Sin cambio estructural necesario.</td></tr>
-              <tr><td>Imágenes</td><td><span class="label ok">Aprobado</span></td><td>3/3 imágenes con alt o rol decorativo.</td><td>Conservado.</td></tr>
-              <tr><td>Imágenes</td><td><span class="label warn">Advertencia</span></td><td>3/3 sin width y height; logos de 3310 px servidos a 132–166 px.</td><td>Añadidas dimensiones y variantes visuales de 640 px (8–22 KB).</td></tr>
-              <tr><td>Imágenes</td><td><span class="label warn">Advertencia</span></td><td>Logo del footer cargado inmediatamente.</td><td>Añadido <code>loading="lazy"</code> y <code>decoding="async"</code>.</td></tr>
-              <tr><td>Enlaces</td><td><span class="label ok">Aprobado</span></td><td>Home, legales, recursos y CTA comprobados con HTTP 200 final.</td><td>Sin enlaces rotos detectados.</td></tr>
-              <tr><td>Enlaces</td><td><span class="label warn">Advertencia</span></td><td>Las URL legales <code>.html</code> redirigían a ruta limpia.</td><td>Interlinking actualizado a las canónicas.</td></tr>
-              <tr><td>Social</td><td><span class="label error">Error</span></td><td>OG URL e imagen señalaban GitHub.</td><td>Actualizadas al dominio comercial.</td></tr>
-              <tr><td>Social</td><td><span class="label warn">Advertencia</span></td><td>Imagen sin dimensiones ni alt declarados y con proporción poco adecuada para tarjeta grande.</td><td>Creada una imagen de marca 1200×630 y añadidos tipo, dimensiones y alt.</td></tr>
-              <tr><td>Social</td><td><span class="label warn">Advertencia</span></td><td>Las páginas legales no tenían tarjetas sociales.</td><td>Añadidos OG y Twitter coherentes.</td></tr>
-              <tr><td>Schema</td><td><span class="label error">Error</span></td><td>No existía ningún bloque estructurado.</td><td>Añadido grafo JSON-LD verificable.</td></tr>
-              <tr><td>Schema</td><td><span class="label ok">Aprobado</span></td><td>Las 8 preguntas del schema coinciden con las FAQ visibles.</td><td>Validar de nuevo tras cada cambio de copy.</td></tr>
-              <tr><td>Técnico</td><td><span class="label ok">Aprobado</span></td><td>HTTPS devuelve 200; muestra de respuesta ~0,29 s.</td><td>Monitorizar Core Web Vitals con datos de campo.</td></tr>
-              <tr><td>Técnico</td><td><span class="label error">Error</span></td><td>Robots declaraba el sitemap de GitHub.</td><td>Corregido al sitemap del dominio.</td></tr>
-              <tr><td>Técnico</td><td><span class="label error">Error</span></td><td>Las 4 entradas del sitemap eran de GitHub.</td><td>Corregidas y actualizadas a 2026-07-21.</td></tr>
-              <tr><td>Técnico</td><td><span class="label error">Error</span></td><td><code>/favicon.ico</code> devolvía 404.</td><td>Creado ICO raíz y variantes PNG.</td></tr>
-              <tr><td>Técnico</td><td><span class="label error">Error</span></td><td>HTTP devolvía 200 con contenido duplicado.</td><td>Pendiente Redirect Rule 301 en Cloudflare.</td></tr>
-              <tr><td>Técnico</td><td><span class="label ok">Aprobado</span></td><td>Robots permite rastreo; no existe bloqueo accidental.</td><td>Conservado.</td></tr>
-              <tr><td>Contenido</td><td><span class="label ok">Aprobado</span></td><td>Contenido extenso, útil y centrado en una intención clara.</td><td>Conservar tono y actualizar solo con datos verificables.</td></tr>
-              <tr><td>Contenido</td><td><span class="label ok">Aprobado</span></td><td>Identidad, email y domicilio visibles.</td><td>Conservar consistencia con el Perfil de Empresa de Google.</td></tr>
+              <tr><td>Meta</td><td><span class="label ok">Aprobado</span></td><td>Portada: title 49 caracteres y description 156.</td><td>Alineados con “revisar factura de la luz gratis”.</td></tr>
+              <tr><td>Meta</td><td><span class="label ok">Aprobado</span></td><td>/optima: title 34 caracteres y description 146.</td><td>Diferencia Mercado y Canales con copy único.</td></tr>
+              <tr><td>Meta</td><td><span class="label ok">Aprobado</span></td><td>Cinco páginas indexables con canonical propio HTTPS.</td><td>Conservar la misma URL en HTML, sitemap y enlaces internos.</td></tr>
+              <tr><td>Headings</td><td><span class="label ok">Aprobado</span></td><td>Una etiqueta H1 por página y jerarquía sin saltos problemáticos.</td><td>El H1 de portada incorpora “factura de la luz”.</td></tr>
+              <tr><td>Imágenes</td><td><span class="label ok">Aprobado</span></td><td>Todas las imágenes visibles tienen alt o rol decorativo.</td><td>Conservar al actualizar recursos.</td></tr>
+              <tr><td>Imágenes</td><td><span class="label ok">Aprobado</span></td><td>Todas declaran width y height; logos visibles de 640 px.</td><td>Reduce cambios de diseño y transferencia frente a originales de 3310 px.</td></tr>
+              <tr><td>Imágenes</td><td><span class="label warn">Mejora menor</span></td><td>Los activos siguen en PNG.</td><td>Evaluar WebP/AVIF solo si la medición de campo identifica impacto.</td></tr>
+              <tr><td>Enlaces</td><td><span class="label ok">Aprobado</span></td><td>13 destinos esenciales comprobados; todos los hosts válidos terminan en 200.</td><td>Sin enlaces rotos en navegación ni CTA.</td></tr>
+              <tr><td>Enlaces</td><td><span class="label ok">Aprobado</span></td><td>El CTA redirige a <code>app.optimamercado.com/bienvenida</code>.</td><td>Flujo operativo y coherente con el servicio anunciado.</td></tr>
+              <tr><td>Enlaces</td><td><span class="label ok">Aprobado</span></td><td>/optima ya no está huérfana.</td><td>Añadido enlace “Óptima Mercado y Canales” desde la portada.</td></tr>
+              <tr><td>Social</td><td><span class="label ok">Aprobado</span></td><td>OG y Twitter completos en portada, /optima y páginas legales.</td><td>Incluyen URL, imagen, tipo, dimensiones y texto alternativo.</td></tr>
+              <tr><td>Social</td><td><span class="label ok">Aprobado</span></td><td>Imagen 1200×630 accesible con 200.</td><td>Conservar URL estable para evitar previsualizaciones obsoletas.</td></tr>
+              <tr><td>Schema</td><td><span class="label ok">Aprobado</span></td><td>Portada con LocalBusiness, WebSite, WebPage, ImageObject, Service y FAQPage.</td><td>Grafo conectado por identificadores canónicos.</td></tr>
+              <tr><td>Schema</td><td><span class="label ok">Aprobado</span></td><td>Las 8 preguntas del schema coinciden con las FAQ visibles.</td><td>Actualizar ambos sitios a la vez si cambia el copy.</td></tr>
+              <tr><td>Schema</td><td><span class="label ok">Aprobado</span></td><td>/optima con WebPage e ItemList de dos destinos.</td><td>Mercado y Canales apuntan a URLs reales que responden 200.</td></tr>
+              <tr><td>Técnico</td><td><span class="label ok">Aprobado</span></td><td>HTTPS, HTTP→HTTPS, robots, sitemap, favicon y 404 correctos.</td><td>Conservar la configuración de Cloudflare y Wrangler.</td></tr>
+              <tr><td>Técnico</td><td><span class="label ok">Aprobado</span></td><td>Muestra de recursos esenciales entre 0,14 y 0,45 segundos.</td><td>Dato puntual; no sustituye Core Web Vitals de campo.</td></tr>
+              <tr><td>Técnico</td><td><span class="label warn">Advertencia</span></td><td><code>www.optimamercado.com</code> no resuelve por DNS.</td><td>Crear registro proxied y redirección 301 en Cloudflare.</td></tr>
+              <tr><td>Técnico</td><td><span class="label warn">Advertencia</span></td><td>No se observó cabecera Strict-Transport-Security.</td><td>Activar HSTS en Cloudflare después de confirmar HTTPS en todos los subdominios.</td></tr>
+              <tr><td>Técnico</td><td><span class="label warn">Sin datos</span></td><td>PageSpeed devolvió 429 y Lighthouse local agotó el tiempo.</td><td>Usar informe de Core Web Vitals de Search Console, sin estimar métricas.</td></tr>
+              <tr><td>Contenido</td><td><span class="label ok">Aprobado</span></td><td>Portada con más de 1.000 palabras útiles y ocho preguntas frecuentes.</td><td>Contenido suficiente para la intención transaccional e informativa.</td></tr>
+              <tr><td>Contenido</td><td><span class="label ok">Aprobado</span></td><td>Identidad, email, domicilio y experiencia visibles.</td><td>Confirmar consistencia con el Perfil de Empresa de Google.</td></tr>
             </tbody>
           </table>
         </div>
@@ -249,8 +248,8 @@
     <section id="siguientes">
       <h2 class="section-title">Publicación y seguimiento</h2>
       <div class="next">
-        <article class="card"><h3>Después de desplegar</h3><ul><li>Comprobar 200 en <code>/favicon.ico</code>, <code>/robots.txt</code> y <code>/sitemap.xml</code>.</li><li>Validar el JSON-LD con Rich Results Test o Schema Markup Validator.</li><li>Enviar el sitemap del dominio en Google Search Console.</li><li>Solicitar indexación de la portada para acelerar el nuevo rastreo.</li></ul></article>
-        <article class="card"><h3>Fuera del código</h3><ul><li>Activar redirección permanente HTTP → HTTPS en Cloudflare.</li><li>Mantener estable la URL <code>/favicon.ico</code>.</li><li>Confirmar que nombre, dirección y categoría coinciden con el Perfil de Empresa de Google.</li><li>Revisar Search Console durante 2–4 semanas; Google decide cuándo vuelve a mostrar el favicon.</li></ul></article>
+        <article class="card"><h3>Google Search Console</h3><ul><li>Enviar <code>https://optimamercado.com/sitemap.xml</code>.</li><li>Inspeccionar y solicitar indexación de <code>/</code> y <code>/optima</code>.</li><li>Revisar cobertura, consultas y páginas indexadas sin confundir rastreo con indexación.</li><li>Medir LCP, INP y CLS con datos de campo cuando haya tráfico suficiente.</li></ul></article>
+        <article class="card"><h3>Cloudflare y Perfil de Empresa</h3><ul><li>Crear DNS para <code>www</code> y redirigirlo al dominio sin www.</li><li>Activar HSTS solo después de comprobar todos los subdominios HTTPS.</li><li>Mantener <code>/optima</code> como URL de la ficha si se desea conservar el selector Mercado/Canales.</li><li>Confirmar que nombre, dirección y categoría coinciden exactamente con el Perfil de Empresa de Google.</li></ul></article>
       </div>
       <div class="actions"><button class="button" type="button" onclick="window.print()">Imprimir o guardar en PDF</button></div>
     </section>

@@ -8,6 +8,7 @@ node_modules/
 dist/
 build/
 .vercel/
+.wrangler/
 
 # Logs y capturas temporales de validación
 *.log
