@@ -1,0 +1,17 @@
+.git
+.github
+.gitignore
+.gitattributes
+.nojekyll
+.assetsignore
+.wrangler
+node_modules
+dist
+build
+wrangler.jsonc
+README.md
+auditoria-seo-optimamercado-com.html
+*.zip
+optima.html
+logo-interno.png
+logo-portada.png
