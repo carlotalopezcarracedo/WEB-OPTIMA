@@ -1,0 +1,9 @@
+{
+  "name": "fancy-band-a14e",
+  "compatibility_date": "2026-07-21",
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page",
+    "html_handling": "drop-trailing-slash"
+  }
+}
