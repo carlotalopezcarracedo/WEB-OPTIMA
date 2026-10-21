@@ -2,27 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://optimamercado.com/</loc>
-    <lastmod>2026-07-21</lastmod>
-    <priority>1.0</priority>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://optimamercado.com/optima</loc>
-    <lastmod>2026-07-21</lastmod>
-    <priority>0.9</priority>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://optimamercado.com/potencia-contratada</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://optimamercado.com/pvpc-o-mercado-libre</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://optimamercado.com/como-leer-factura-luz</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://optimamercado.com/ahorrar-factura-luz</loc>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://optimamercado.com/privacidad</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://optimamercado.com/aviso-legal</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://optimamercado.com/cookies</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.5</priority>
   </url>
 </urlset>

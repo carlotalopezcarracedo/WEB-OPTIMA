@@ -34,6 +34,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
+  <!-- TODO GEO: añadir "sameAs" con los perfiles sociales reales de Óptima Mercado (LinkedIn, Instagram, Google Business...)
+       aquí dentro del objeto LocalBusiness cuando existan, para reforzar el grafo de entidad de marca. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -60,7 +62,11 @@
           "addressLocality": "O Milladoiro",
           "addressRegion": "A Coruña",
           "addressCountry": "ES"
-        }
+        },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Galicia" },
+          { "@type": "Country", "name": "España" }
+        ]
       },
       {
         "@type": "WebSite",
@@ -151,6 +157,49 @@
             "@type": "Question",
             "name": "¿Qué pasa si mi contrato ya está bien?",
             "acceptedAnswer": { "@type": "Answer", "text": "Te lo diremos. A veces la mejor decisión es no cambiar nada, y saberlo también aporta tranquilidad." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué es la potencia contratada?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Es la cantidad máxima de electricidad que puedes usar a la vez en tu casa o negocio sin que salte el automático, y se paga como un término fijo en la factura, lo uses o no. Si está más alta de lo que necesitas, pagas de más cada mes; si está demasiado baja, se te va la luz con facilidad." }
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://optimamercado.com/#como-funciona",
+        "name": "Cómo revisar tu factura de la luz con Óptima Mercado",
+        "description": "El proceso está pensado para móvil: una foto clara o un PDF es suficiente para empezar la revisión.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Subes la factura",
+            "text": "Subes una foto clara o un PDF de tu factura de la luz. El proceso está pensado para hacerse desde el móvil."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Analizamos el contrato",
+            "text": "Revisamos potencia contratada, consumo real, tarifa y condiciones de tu contrato actual."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Te explicamos el resultado",
+            "text": "Te explicamos con claridad qué estás pagando y si tu contrato está bien ajustado."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Vemos opciones",
+            "text": "Si hay margen de mejora, te mostramos las alternativas disponibles, sin compromiso."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Tú decides",
+            "text": "Decides si quieres ajustar algo, cambiar de opción o mantener tu contrato tal y como está."
           }
         ]
       }
@@ -2437,8 +2486,9 @@
           <a href="#que-revisamos">Qué revisamos</a>
           <a href="#como-funciona">Cómo funciona</a>
           <a href="#despues">Resultados</a>
+          <a href="#guias">Guías</a>
           <a href="#faq">FAQ</a>
-          <a class="nav-cta" href="https://optimamercado.com/q/7ee8b384-2056-4fde-beb1-f13c248c7462">Analizar factura</a>
+          <a class="nav-cta" href="https://optimamercado.com/q/7ee8b384-2056-4fde-beb1-f13c248c7462" rel="nofollow">Analizar factura</a>
         </nav>
 
         <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="site-nav" aria-expanded="false">
@@ -2454,7 +2504,7 @@
         <div class="hero__inner">
           <div class="hero__content">
             <span class="hero__eyebrow">Revisión gratuita de factura de luz</span>
-            <h1><span>¿Pagas de más en</span><span>tu factura de la luz?</span></h1>
+            <h1><span>¿Pagas de más en</span> <span>tu factura de la luz?</span></h1>
             <p class="hero__lead">
               <span>Sube tu factura y la revisamos gratis.</span>
               <span>Te explicamos con claridad qué estás pagando.</span>
@@ -2463,7 +2513,7 @@
             </p>
 
             <div class="hero__actions" role="group" aria-label="Acciones principales">
-              <a class="btn btn--primary" href="https://optimamercado.com/q/7ee8b384-2056-4fde-beb1-f13c248c7462">Analizar factura gratis</a>
+              <a class="btn btn--primary" href="https://optimamercado.com/q/7ee8b384-2056-4fde-beb1-f13c248c7462" rel="nofollow">Analizar factura gratis</a>
               <a class="btn btn--secondary" href="#como-funciona">Ver cómo funciona</a>
             </div>
             <p class="hero__microcopy">Gratis · Sin compromiso · Explicado por personas reales</p>
@@ -2704,7 +2754,7 @@
         <div class="section__header">
           <span class="section__eyebrow">Por qué Óptima</span>
           <h2>Energía explicada por personas, no por letra pequeña.</h2>
-          <p>Somos un equipo gallego con experiencia real en el sector energético. Trabajamos caso a caso, con criterio y sin prometer lo que no depende de nosotros.</p>
+          <p>Somos un equipo gallego con sede en O Milladoiro (A Coruña) y experiencia real en el sector energético. Revisamos facturas de hogares, autónomos y pequeños negocios de Galicia y del resto de España. Trabajamos caso a caso, con criterio y sin prometer lo que no depende de nosotros.</p>
         </div>
 
         <div class="why-layout">
@@ -2753,6 +2803,46 @@
       </div>
     </section>
 
+    <section class="section" id="guias">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Guías</span>
+          <h2>Entiende tu factura de la luz antes de decidir nada.</h2>
+          <p>Explicaciones claras sobre potencia, tarifas y cómo leer cada apartado de tu factura.</p>
+        </div>
+
+        <div class="why-list">
+            <div class="why-item">
+              <div>
+                <strong><a href="/potencia-contratada">Potencia contratada de la luz: qué es y cómo saber si pagas de más</a></strong>
+                <span>Qué es la potencia contratada y cómo saber si la tuya es la adecuada.</span>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div>
+                <strong><a href="/pvpc-o-mercado-libre">PVPC o mercado libre: qué tarifa de la luz te conviene</a></strong>
+                <span>Diferencias entre PVPC y mercado libre y cómo elegir según tu caso.</span>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div>
+                <strong><a href="/como-leer-factura-luz">Cómo leer tu factura de la luz paso a paso</a></strong>
+                <span>Guía para entender cada apartado de la factura de la luz.</span>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div>
+                <strong><a href="/ahorrar-factura-luz">Cómo ahorrar en la factura de la luz sin complicarte</a></strong>
+                <span>Medidas realistas para pagar menos en la factura de la luz.</span>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section direct-cta" id="analizar">
       <div class="container">
         <div class="direct-cta__box">
@@ -2767,7 +2857,7 @@
             </div>
           </div>
 
-          <a class="btn btn--primary" href="https://optimamercado.com/q/7ee8b384-2056-4fde-beb1-f13c248c7462">Analizar factura gratis</a>
+          <a class="btn btn--primary" href="https://optimamercado.com/q/7ee8b384-2056-4fde-beb1-f13c248c7462" rel="nofollow">Analizar factura gratis</a>
         </div>
       </div>
     </section>
@@ -2820,6 +2910,11 @@
             <summary>¿Qué pasa si mi contrato ya está bien?</summary>
             <p>Te lo diremos. A veces la mejor decisión es no cambiar nada, y saberlo también aporta tranquilidad.</p>
           </details>
+
+          <details class="faq-item">
+            <summary>¿Qué es la potencia contratada?</summary>
+            <p>Es la cantidad máxima de electricidad que puedes usar a la vez en tu casa o negocio sin que salte el automático, y se paga como un término fijo en la factura, lo uses o no. Si está más alta de lo que necesitas, pagas de más cada mes; si está demasiado baja, se te va la luz con facilidad. <a href="/potencia-contratada">Más información sobre la potencia contratada</a>.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -2828,7 +2923,7 @@
       <div class="container">
         <h2>Tardarás menos de un minuto.</h2>
         <p>Sube tu factura y sal de dudas. Si está bien, te lo diremos. Si hay margen de mejora, también.</p>
-        <a class="btn btn--primary" href="https://optimamercado.com/q/7ee8b384-2056-4fde-beb1-f13c248c7462">Analizar factura gratis</a>
+        <a class="btn btn--primary" href="https://optimamercado.com/q/7ee8b384-2056-4fde-beb1-f13c248c7462" rel="nofollow">Analizar factura gratis</a>
       </div>
     </section>
   </main>
@@ -2841,7 +2936,7 @@
             <img src="public/optima-logo-white-640.png" alt="Óptima Mercado" width="640" height="218" loading="lazy" decoding="async" />
             <span>Revisión gratuita de factura de luz, sin compromiso.</span>
           </a>
-          <a class="footer-mini-cta" href="https://optimamercado.com/q/7ee8b384-2056-4fde-beb1-f13c248c7462">Analizar factura</a>
+          <a class="footer-mini-cta" href="https://optimamercado.com/q/7ee8b384-2056-4fde-beb1-f13c248c7462" rel="nofollow">Analizar factura</a>
         </div>
 
         <div class="site-footer__inner">
@@ -2864,6 +2959,10 @@
               <a href="#despues">Después de revisar</a>
               <a href="#por-que-optima">Por qué Óptima</a>
               <a href="#faq">Preguntas frecuentes</a>
+              <a href="/potencia-contratada">Potencia contratada de la luz: qué es y cómo saber si pagas de más</a>
+              <a href="/pvpc-o-mercado-libre">PVPC o mercado libre: qué tarifa de la luz te conviene</a>
+              <a href="/como-leer-factura-luz">Cómo leer tu factura de la luz paso a paso</a>
+              <a href="/ahorrar-factura-luz">Cómo ahorrar en la factura de la luz sin complicarte</a>
               <a href="/optima">Óptima Mercado y Canales</a>
             </div>
           </nav>
