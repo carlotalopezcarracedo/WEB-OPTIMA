@@ -1882,7 +1882,7 @@
 
     .site-footer__inner {
       display: grid;
-      grid-template-columns: minmax(270px, 1.06fr) minmax(420px, 1.34fr) minmax(170px, 0.78fr) minmax(250px, 1fr);
+      grid-template-columns: minmax(220px, 1.2fr) minmax(120px, 0.7fr) minmax(190px, 1fr) minmax(100px, 0.6fr) minmax(210px, 1fr);
       column-gap: 38px;
       row-gap: 26px;
       align-items: start;
@@ -1917,7 +1917,7 @@
 
     .footer-badges {
       display: flex;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       gap: 8px;
       margin-top: 6px;
     }
@@ -1958,7 +1958,7 @@
 
     .footer-links {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: minmax(0, 1fr);
       gap: 7px 16px;
       color: rgba(255, 255, 255, 0.7);
       font-weight: 700;
@@ -1973,6 +1973,7 @@
 
     .footer-links a {
       position: relative;
+      overflow-wrap: anywhere;
       display: inline-flex;
       align-items: center;
       min-height: 24px;
@@ -2002,15 +2003,6 @@
       width: 10px;
       border-radius: 999px;
       background: linear-gradient(90deg, var(--green-500), #35a6d8);
-    }
-
-    .footer-column[aria-label="Páginas legales"] .footer-links {
-      grid-template-columns: minmax(0, 1fr);
-    }
-
-    .footer-column[aria-label="Mapa del sitio"] .footer-links {
-      grid-template-columns: repeat(2, max-content);
-      column-gap: 46px;
     }
 
     .footer-contact {
@@ -2951,19 +2943,23 @@
           </div>
 
           <nav class="footer-column" aria-label="Mapa del sitio">
-            <h3>Mapa de la web</h3>
+            <h3>Mapa</h3>
             <div class="footer-links">
               <a href="#inicio">Inicio</a>
-              <a href="#que-revisamos">Qué revisamos</a>
               <a href="#como-funciona">Cómo funciona</a>
-              <a href="#despues">Después de revisar</a>
               <a href="#por-que-optima">Por qué Óptima</a>
               <a href="#faq">Preguntas frecuentes</a>
-              <a href="/potencia-contratada">Potencia contratada de la luz: qué es y cómo saber si pagas de más</a>
-              <a href="/pvpc-o-mercado-libre">PVPC o mercado libre: qué tarifa de la luz te conviene</a>
-              <a href="/como-leer-factura-luz">Cómo leer tu factura de la luz paso a paso</a>
-              <a href="/ahorrar-factura-luz">Cómo ahorrar en la factura de la luz sin complicarte</a>
-              <a href="/optima">Óptima Mercado y Canales</a>
+              <a href="/optima">Mercado y Canales</a>
+            </div>
+          </nav>
+
+          <nav class="footer-column" aria-label="Guías">
+            <h3>Guías</h3>
+            <div class="footer-links">
+              <a href="/potencia-contratada">Potencia contratada</a>
+              <a href="/pvpc-o-mercado-libre">PVPC o mercado libre</a>
+              <a href="/como-leer-factura-luz">Cómo leer tu factura</a>
+              <a href="/ahorrar-factura-luz">Cómo ahorrar en la luz</a>
             </div>
           </nav>
 
